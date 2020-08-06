@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-08-05T20:17:29 MESZ" name="Default suite" finished-at="2020-08-05T20:20:38 MESZ" duration-ms="188924">
+    <groups>
+    </groups>
+    <test started-at="2020-08-05T20:17:29 MESZ" name="Default test" finished-at="2020-08-05T20:20:38 MESZ" duration-ms="188924">
+      <class name="de.alain.TestNGParallel.TestParallelClassOne">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@bae7dc0]" started-at="2020-08-05T20:17:29 MESZ" name="beforeMethod" finished-at="2020-08-05T20:17:34 MESZ" duration-ms="4613" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@bae7dc0]" started-at="2020-08-05T20:17:34 MESZ" name="test_1" data-provider="data-provider" finished-at="2020-08-05T20:18:31 MESZ" duration-ms="57129" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Testautomatisierer]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1 -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@bae7dc0]" started-at="2020-08-05T20:18:31 MESZ" name="beforeMethod" finished-at="2020-08-05T20:18:31 MESZ" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@bae7dc0]" started-at="2020-08-05T20:18:31 MESZ" name="test_1" data-provider="data-provider" finished-at="2020-08-05T20:20:34 MESZ" duration-ms="123051" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Leiter]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@bae7dc0]" started-at="2020-08-05T20:18:31 MESZ" name="afterMethod" finished-at="2020-08-05T20:18:31 MESZ" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@bae7dc0]" started-at="2020-08-05T20:20:34 MESZ" name="afterMethod" finished-at="2020-08-05T20:20:38 MESZ" duration-ms="3921" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- de.alain.TestNGParallel.TestParallelClassOne -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

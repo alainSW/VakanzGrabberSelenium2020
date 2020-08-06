@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="classes" name="Failed suite [Test-class Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="classes" name="Test-class test(failed)">
+    <classes>
+      <class name="de.alain.TestNGParallel.TestParallelClassOne">
+        <methods>
+          <include name="test_1" invocation-numbers="0 1"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- de.alain.TestNGParallel.TestParallelClassOne -->
+      <class name="de.alain.TestNGParallel.TestParallelClassTwo">
+        <methods>
+          <include name="test_2" invocation-numbers="0 1"/>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- de.alain.TestNGParallel.TestParallelClassTwo -->
+    </classes>
+  </test> <!-- Test-class test(failed) -->
+</suite> <!-- Failed suite [Test-class Suite] -->
