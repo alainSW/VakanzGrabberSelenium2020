@@ -193,30 +193,11 @@
     <version>3.8.1</version>
 </dependency>
 
-
-
     </dependencies>
     
-    <repositories>
-       <repository>
-           <id>myMavenRepo.read</id>
-           <url>${myMavenRepo.read.url}</url>
-       </repository>
-    </repositories>
+    
            	
-           	
-     <distributionManagement>
-        <repository>
-          <id>myMavenRepo.write</id>
-          <url>${myMavenRepo.write.url}</url>
-         </repository>
-         
-          <snapshotRepository>
-            <id>myMavenRepo.write</id>
-            <url>${myMavenRepo.write.url}</url>
-        </snapshotRepository>
-     </distributionManagement>
-           	
+    
   
      <build>
 	<plugins>
