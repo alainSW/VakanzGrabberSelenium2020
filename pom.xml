@@ -34,11 +34,6 @@
     <artifactId>selenium-java</artifactId>
     <version>3.141.59</version>
 </dependency>
-<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
-
-
-
-
 
 
 <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
@@ -104,8 +99,6 @@
     <version>3.0.0-M3</version>
 </dependency>
 
-
-
 <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
 <dependency>
     <groupId>commons-io</groupId>
@@ -120,15 +113,6 @@
     <version>5.5.0-M1</version>
     <scope>test</scope>
 </dependency>
-
-
-
-<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-
-
-
-
-
 
 <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-io -->
 <dependency>
@@ -166,9 +150,6 @@
     <version>1.1.9</version>
 </dependency>
 
-<!-- https://mvnrepository.com/artifact/com.tngtech.java/junit-dataprovider -->
-
-
 
 <!-- https://mvnrepository.com/artifact/org.apache.maven/maven-project -->
 <dependency>
@@ -192,8 +173,6 @@
 </dependency>
 
 
-
-
 <!-- https://mvnrepository.com/artifact/maven/maven -->
 <dependency>
     <groupId>maven</groupId>
@@ -209,14 +188,7 @@
 </dependency>
 
 
-
-
-
-
-
-
-
-    </dependencies>
+ </dependencies>
     
     
     
