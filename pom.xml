@@ -9,6 +9,12 @@
     
   <dependencies>
   
+<!-- https://mvnrepository.com/artifact/com.bea.xml/jsr173-ri -->
+<dependency>
+    <groupId>com.bea.xml</groupId>
+    <artifactId>jsr173-ri</artifactId>
+    <version>1.0</version>
+</dependency>
 
   
   <!-- https://mvnrepository.com/artifact/org.testng/testng -->
