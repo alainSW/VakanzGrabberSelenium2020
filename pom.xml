@@ -9,17 +9,8 @@
     
   <dependencies>
   
-  <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-plugin-plugin -->
-<dependency>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-plugin-plugin</artifactId>
-    <version>3.6.0</version>
-</dependency>
 
-
-
- 
-
+  
   <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
     <groupId>org.testng</groupId>
@@ -202,27 +193,84 @@
     <version>3.8.1</version>
 </dependency>
 
-<!-- https://mvnrepository.com/artifact/org.apache.maven/maven-plugin-api -->
+<!-- https://mvnrepository.com/artifact/org.apache.maven/maven-project -->
 <dependency>
     <groupId>org.apache.maven</groupId>
-    <artifactId>maven-plugin-api</artifactId>
+    <artifactId>maven-project</artifactId>
+    <version>3.0-alpha-2</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.maven/maven-artifact -->
+<dependency>
+    <groupId>org.apache.maven</groupId>
+    <artifactId>maven-artifact</artifactId>
     <version>3.6.3</version>
 </dependency>
 
-<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-dependency-plugin -->
+<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-plugin-plugin -->
 <dependency>
     <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-dependency-plugin</artifactId>
-    <version>3.1.2</version>
+    <artifactId>maven-plugin-plugin</artifactId>
+    <version>3.6.0</version>
 </dependency>
+
+
+<!-- https://mvnrepository.com/artifact/org.jenkins-ci.main/maven-plugin -->
+<dependency>
+    <groupId>org.jenkins-ci.main</groupId>
+    <artifactId>maven-plugin</artifactId>
+    <version>3.0-rc1</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/maven/maven -->
+<dependency>
+    <groupId>maven</groupId>
+    <artifactId>maven</artifactId>
+    <version>1.1</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-clean-plugin -->
+<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-clean-plugin</artifactId>
+    <version>3.1.0</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/gradle.plugin.com.github.opengl-8080/my-plugin -->
+<dependency>
+    <groupId>gradle.plugin.com.github.opengl-8080</groupId>
+    <artifactId>my-plugin</artifactId>
+    <version>1.0.1</version>
+</dependency>
+
+
+
+
 
 
 
     </dependencies>
     
-    
+    <repositories>
+       <repository>
+           <id>myMavenRepo.read</id>
+           <url>${myMavenRepo.read.url}</url>
+       </repository>
+    </repositories>
            	
-    
+           	
+     <distributionManagement>
+        <repository>
+          <id>myMavenRepo.write</id>
+          <url>${myMavenRepo.write.url}</url>
+         </repository>
+         
+          <snapshotRepository>
+            <id>myMavenRepo.write</id>
+            <url>${myMavenRepo.write.url}</url>
+        </snapshotRepository>
+     </distributionManagement>
+           	
   
      <build>
 	<plugins>
@@ -246,38 +294,11 @@
     			<groupId>org.jenkins-ci.plugins</groupId>
    				 <artifactId>git</artifactId>
     		<version>3.6.0</version>
-            </dependency>
-            
-          <!-- https://mvnrepository.com/artifact/org.jenkins-ci.main/maven-plugin -->
-			<dependency>
-    			<groupId>org.jenkins-ci.main</groupId>
-    			<artifactId>maven-plugin</artifactId>
-    			<version>3.0-rc1</version>
-			</dependency>
+            </dependency><!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/git -->
+
+
+
 			
-			<!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/junit -->
-            <dependency>
-               <groupId>org.jenkins-ci.plugins</groupId>
-               <artifactId>junit</artifactId>
-               <version>1.22-beta-1</version>
-            </dependency>
-            
-            <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins.workflow/workflow-job -->
-           <dependency>
-             <groupId>org.jenkins-ci.plugins.workflow</groupId>
-    		 <artifactId>workflow-job</artifactId>
-    		 <version>2.15</version>
-    		<scope>test</scope>
-		  </dependency>
-		  
-		  <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/testng-plugin -->
-         <dependency>
-          <groupId>org.jenkins-ci.plugins</groupId>
-         <artifactId>testng-plugin</artifactId>
-         <version>1.14</version>
-        </dependency>
-		  
-            
             
            </dependencies>
            <configuration>
