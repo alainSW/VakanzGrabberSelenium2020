@@ -192,12 +192,7 @@
 </dependency>
 
 
-<!-- https://mvnrepository.com/artifact/org.jenkins-ci.main/maven-plugin -->
-<dependency>
-    <groupId>org.jenkins-ci.main</groupId>
-    <artifactId>maven-plugin</artifactId>
-    <version>3.0-rc1</version>
-</dependency>
+
 
 <!-- https://mvnrepository.com/artifact/maven/maven -->
 <dependency>
@@ -213,12 +208,7 @@
     <version>3.1.0</version>
 </dependency>
 
-<!-- https://mvnrepository.com/artifact/gradle.plugin.com.github.opengl-8080/my-plugin -->
-<dependency>
-    <groupId>gradle.plugin.com.github.opengl-8080</groupId>
-    <artifactId>my-plugin</artifactId>
-    <version>1.0.1</version>
-</dependency>
+
 
 
 
@@ -228,25 +218,8 @@
 
     </dependencies>
     
-    <repositories>
-       <repository>
-           <id>myMavenRepo.read</id>
-           <url>${myMavenRepo.read.url}</url>
-       </repository>
-    </repositories>
-           	
-           	
-     <distributionManagement>
-        <repository>
-          <id>myMavenRepo.write</id>
-          <url>${myMavenRepo.write.url}</url>
-         </repository>
-         
-          <snapshotRepository>
-            <id>myMavenRepo.write</id>
-            <url>${myMavenRepo.write.url}</url>
-        </snapshotRepository>
-     </distributionManagement>
+    
+    
            	
   
      <build>
@@ -272,7 +245,19 @@
    				 <artifactId>git</artifactId>
     		<version>3.6.0</version>
             </dependency><!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/git -->
+<!-- https://mvnrepository.com/artifact/gradle.plugin.com.github.opengl-8080/my-plugin -->
+<dependency>
+    <groupId>gradle.plugin.com.github.opengl-8080</groupId>
+    <artifactId>my-plugin</artifactId>
+    <version>1.0.1</version>
+</dependency>
 
+<!-- https://mvnrepository.com/artifact/org.jenkins-ci.main/maven-plugin -->
+<dependency>
+    <groupId>org.jenkins-ci.main</groupId>
+    <artifactId>maven-plugin</artifactId>
+    <version>3.0-rc1</version>
+</dependency>
 
 
 			
