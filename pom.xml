@@ -9,8 +9,17 @@
     
   <dependencies>
   
+  <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-plugin-plugin -->
+<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-plugin-plugin</artifactId>
+    <version>3.6.0</version>
+</dependency>
 
-  
+
+
+ 
+
   <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
     <groupId>org.testng</groupId>
@@ -193,6 +202,22 @@
     <version>3.8.1</version>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/org.apache.maven/maven-plugin-api -->
+<dependency>
+    <groupId>org.apache.maven</groupId>
+    <artifactId>maven-plugin-api</artifactId>
+    <version>3.6.3</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-dependency-plugin -->
+<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-dependency-plugin</artifactId>
+    <version>3.1.2</version>
+</dependency>
+
+
+
     </dependencies>
     
     
@@ -222,6 +247,37 @@
    				 <artifactId>git</artifactId>
     		<version>3.6.0</version>
             </dependency>
+            
+          <!-- https://mvnrepository.com/artifact/org.jenkins-ci.main/maven-plugin -->
+			<dependency>
+    			<groupId>org.jenkins-ci.main</groupId>
+    			<artifactId>maven-plugin</artifactId>
+    			<version>3.0-rc1</version>
+			</dependency>
+			
+			<!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/junit -->
+            <dependency>
+               <groupId>org.jenkins-ci.plugins</groupId>
+               <artifactId>junit</artifactId>
+               <version>1.22-beta-1</version>
+            </dependency>
+            
+            <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins.workflow/workflow-job -->
+           <dependency>
+             <groupId>org.jenkins-ci.plugins.workflow</groupId>
+    		 <artifactId>workflow-job</artifactId>
+    		 <version>2.15</version>
+    		<scope>test</scope>
+		  </dependency>
+		  
+		  <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/testng-plugin -->
+         <dependency>
+          <groupId>org.jenkins-ci.plugins</groupId>
+         <artifactId>testng-plugin</artifactId>
+         <version>1.14</version>
+        </dependency>
+		  
+            
             
            </dependencies>
            <configuration>
