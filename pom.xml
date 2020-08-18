@@ -151,10 +151,7 @@
 
     </dependencies>
     
-    
-    
-    
-    
+
      <build>
 	 <plugins>
 		<plugin>
@@ -176,7 +173,7 @@
            	</additionalClasspathElements>
            </configuration>
     		
-    		
+
     	
        </plugin>
 	</plugins>
