@@ -40,11 +40,13 @@ public class TestParallelClassOne {
 
 	ImportAnmeldeDatenVonExcelToJava importAnmeldeDatenVonExcelToJava;
 	StackTraceElement[] stackTrace;
-	public String dataProviderName;
+	public String dataProviderParameter = "";
 
-	private String FirstElementDataProvider;
-	private String LastElementDataProvider;
-	private String Webseite;
+	private String FirstElementDataProvider = "";
+
+	private String LastElementDataProvider = "";
+
+	private String Webseite = "";
 
 	@BeforeMethod
 	public void beforeMethod() throws InterruptedException, IOException {
@@ -76,19 +78,32 @@ public class TestParallelClassOne {
 	@DataProvider(name = "data-provider")
 	public Object[][] dataProviderMethod() throws IOException {
 		Webseite = ImportAnmeldeDatenVonExcelToJava.getProjektsuchbegriffToExcel()[0];
+
 		FirstElementDataProvider = ImportAnmeldeDatenVonExcelToJava.getProjektsuchbegriffToExcel()[1];
 		LastElementDataProvider = ImportAnmeldeDatenVonExcelToJava.getProjektsuchbegriffToExcel()[2];
 
 		return new Object[][] { { FirstElementDataProvider }, { LastElementDataProvider } };
 	}
 
+	/*
+	 * @DataProvider(name = "data-provider") public Object[][] dataProviderMethod()
+	 * throws IOException { FirstElementDataProvider =
+	 * ImportAnmeldeDatenVonExcelToJava2.getProjektsuchbegriffToExcel()[1][1];
+	 * EmailAdresse =
+	 * ImportAnmeldeDatenVonExcelToJava2.getAnmeldeDatenToExcel()[1][0]; Passwort =
+	 * ImportAnmeldeDatenVonExcelToJava2.getAnmeldeDatenToExcel()[1][1]; Object[][]
+	 * data = ImportAnmeldeDatenVonExcelToJava2.getProjektsuchbegriffToExcel();
+	 * 
+	 * return data; }
+	 */
+
 	@Test(dataProvider = "data-provider")
 	public void test_1(String data) throws InterruptedException, IOException {
 
 		stackTrace = new Throwable().getStackTrace();
-		dataProviderName = data;
+		dataProviderParameter = data;
 
-		if (dataProviderName.equals(FirstElementDataProvider)) {
+		if (dataProviderParameter.equals(FirstElementDataProvider)) {
 			// Aktion: Browser-> Web Seite anklicken
 			login.visit(Webseite);
 			Thread.sleep(3000);
@@ -129,7 +144,7 @@ public class TestParallelClassOne {
 
 	@AfterMethod
 	public void afterMethod() throws InterruptedException, IOException {
-		if (dataProviderName.equals(LastElementDataProvider)) {
+		if (dataProviderParameter.equals(LastElementDataProvider)) {
 			Thread.sleep(3000);
 			driver.quit();
 		}

@@ -13,9 +13,9 @@ public class CookiesHandling extends Base {
 		// TODO Auto-generated constructor stub
 	}
 
-	@FindBy(xpath = "//div[@id='CybotCookiebotDialogBodyButtons']//a[contains(text(),'Akzeptieren » ')]")
+	@FindBy(xpath = "//div[@id='CybotCookiebotDialogBody']//div[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelectionWrapper']//a[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection'][contains(text(),'Auswahl bestätige')]")
 	private WebElement cookiesButton;
-	@FindBy(xpath = "//div[@id='CybotCookiebotDialogBodyButtons']//a[contains(text(),'Akzeptieren » ')]")
+	@FindBy(xpath = "//div[@id='CybotCookiebotDialogBody']//div[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelectionWrapper']//a[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection'][contains(text(),'Auswahl bestätigen')]")
 	private WebElement cookiesButtonExist;
 
 	// cookiesButtoneingeben
@@ -34,7 +34,7 @@ public class CookiesHandling extends Base {
 	public void IscookiesButtonExistAcceptButtonDrücken() {
 		new WebDriverWait(driver, 3);
 
-		if (cookiesButtonExistPrüfen().equals("Akzeptieren »")) {
+		if (cookiesButtonExistPrüfen().equals("Auswahl bestätigen")) {
 			System.out.println("Cookies existiert");
 			cookiesButton();
 			System.out.println("Cookies wurde azeptiert");

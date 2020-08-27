@@ -9,8 +9,6 @@
     
   <dependencies>
   
-
-  
   <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
     <groupId>org.testng</groupId>
@@ -18,7 +16,6 @@
     <version>7.1.0</version>
     <scope>test</scope>
 </dependency>
-
 <!-- https://mvnrepository.com/artifact/junit/junit -->
 <dependency>
     <groupId>junit</groupId>
@@ -104,13 +101,6 @@
     <version>3.0.0-M3</version>
 </dependency>
 
-<!-- https://mvnrepository.com/artifact/org.testng/testng -->
-<dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.0.0-beta4</version>
-    <scope>test</scope>
-</dependency>
 
 <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
 <dependency>
@@ -119,42 +109,12 @@
     <version>2.6</version>
 </dependency>
 
-<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
-<dependency>
-    <groupId>org.junit.jupiter</groupId>
-    <artifactId>junit-jupiter-api</artifactId>
-    <version>5.5.0-M1</version>
-    <scope>test</scope>
-</dependency>
-
-
-<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
-<dependency>
-    <groupId>org.junit.jupiter</groupId>
-    <artifactId>junit-jupiter</artifactId>
-    <version>5.5.0-M1</version>
-    <scope>test</scope>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-<dependency>
-    <groupId>commons-io</groupId>
-    <artifactId>commons-io</artifactId>
-    <version>2.6</version>
-</dependency>
 
 <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-io -->
 <dependency>
     <groupId>org.apache.commons</groupId>
     <artifactId>commons-io</artifactId>
     <version>1.3.2</version>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
-<dependency>
-    <groupId>io.github.bonigarcia</groupId>
-    <artifactId>webdrivermanager</artifactId>
-    <version>3.4.0</version>
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/ru.sbtqa/webdrivermanager -->
@@ -179,13 +139,7 @@
     <version>1.1.9</version>
 </dependency>
 
-<!-- https://mvnrepository.com/artifact/com.tngtech.java/junit-dataprovider -->
-<dependency>
-    <groupId>com.tngtech.java</groupId>
-    <artifactId>junit-dataprovider</artifactId>
-    <version>1.13.1</version>
-    <scope>test</scope>
-</dependency>
+
 
 <dependency>
     <groupId>io.github.bonigarcia</groupId>
@@ -197,60 +151,34 @@
 
     </dependencies>
     
-    <repositories>
-       <repository>
-           <id>myMavenRepo.read</id>
-           <url>${myMavenRepo.read.url}</url>
-       </repository>
-    </repositories>
-           	
-           	
-     <distributionManagement>
-        <repository>
-          <id>myMavenRepo.write</id>
-          <url>${myMavenRepo.write.url}</url>
-         </repository>
-         
-          <snapshotRepository>
-            <id>myMavenRepo.write</id>
-            <url>${myMavenRepo.write.url}</url>
-        </snapshotRepository>
-     </distributionManagement>
-           	
-  
+
      <build>
-	<plugins>
+	 <plugins>
 		<plugin>
+		
+		
            	<groupId>org.junit.platform</groupId>
     		<artifactId>junit-platform-surefire-provider</artifactId>
     		<version>1.3.2</version>
-           <dependencies>
+            <dependencies>
                <dependency>
     				<groupId>org.junit.platform</groupId>
     				<artifactId>junit-platform-surefire-provider</artifactId>
     				<version>1.3.2</version>
-			   </dependency>
-			   <dependency>
-    				<groupId>org.apache.maven.plugins</groupId>
-    				<artifactId>maven-surefire-plugin</artifactId>
-    			<version>3.0.0-M5</version>
-			</dependency>
-			  <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/git -->
-			<dependency>
-    			<groupId>org.jenkins-ci.plugins</groupId>
-   				 <artifactId>git</artifactId>
-    		<version>3.6.0</version>
-            </dependency>
-            
+			   </dependency>	   	
            </dependencies>
            <configuration>
            	<additionalClasspathElements>
            		<additionalClasspathElement>src/test/java/</additionalClasspathElement>
            	</additionalClasspathElements>
-           	
            </configuration>
+    		
+
+    	
        </plugin>
 	</plugins>
 </build>
+
+
     
 </project>
