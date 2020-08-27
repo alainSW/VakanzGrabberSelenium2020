@@ -47,7 +47,7 @@ public class TestParallelClassthree {
 
 		if (driver == null) {
 
-			System.setProperty("webdriver.firefox.driver",
+			System.setProperty("webdriver.firefox.dr iver",
 					System.getProperty("user.dir") + "\\src\\test\\resources\\Executeable\\geckodriver.exe");
 			driver = new FirefoxDriver();
 			// driver.manage().deleteAllCookies();

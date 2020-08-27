@@ -75,8 +75,8 @@ public class TestParallelClassTwo {
 	@DataProvider(name = "data-provider")
 	public Object[][] dataProviderMethod() throws IOException {
 		Webseite = ImportAnmeldeDatenVonExcelToJava.getProjektsuchbegriffToExcel()[0];
-		FirstElementDataProvider = ImportAnmeldeDatenVonExcelToJava.getProjektsuchbegriffToExcel()[1];
-		LastElementDataProvider = ImportAnmeldeDatenVonExcelToJava.getProjektsuchbegriffToExcel()[2];
+		FirstElementDataProvider = ImportAnmeldeDatenVonExcelToJava.getProjektsuchbegriffToExcel()[3];
+		LastElementDataProvider = ImportAnmeldeDatenVonExcelToJava.getProjektsuchbegriffToExcel()[4];
 
 		return new Object[][] { { FirstElementDataProvider }, { LastElementDataProvider } };
 	}
@@ -86,8 +86,6 @@ public class TestParallelClassTwo {
 
 		stackTrace = new Throwable().getStackTrace();
 		dataProviderName = data;
-		FirstElementDataProvider = ImportAnmeldeDatenVonExcelToJava.getProjektsuchbegriffToExcel()[2];
-		LastElementDataProvider = ImportAnmeldeDatenVonExcelToJava.getProjektsuchbegriffToExcel()[3];
 
 		if (dataProviderName.equals(FirstElementDataProvider)) {
 			// Aktion: Browser-> Web Seite anklicken

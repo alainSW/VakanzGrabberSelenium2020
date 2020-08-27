@@ -26,19 +26,19 @@ public class ImportAnmeldeDatenVonExcelToJava {
 		// Read XSL file
 		FileInputStream inputStream = new FileInputStream(file);
 
-		// Get the workbook instance for XLS file
+		// Get the workbook instance for XLS file HSSFWorkbook
 		HSSFWorkbook workbook = new HSSFWorkbook(inputStream);
 
 		// Get first sheet from the workbook
 		HSSFSheet sheet = workbook.getSheetAt(0);
 
 		// Get iterator to all the rows in current sheet
+
 		Iterator<Row> rowIterator = sheet.iterator();
 
 		while (rowIterator.hasNext()) {
 
-			Row row = rowIterator.next();
-			// Get iterator to all cells of current row
+			Row row = rowIterator.next(); // Get iterator to all cells of current row
 			Iterator<Cell> cellIterator = row.cellIterator();
 
 			System.out.println("row.getRowNum() :" + row.getRowNum());
@@ -48,9 +48,9 @@ public class ImportAnmeldeDatenVonExcelToJava {
 					Cell cell = cellIterator.next();
 					System.out.println("cell.getColumnIndex() :" + cell.getColumnIndex());
 					System.out.println("cell.getStringCellValue() :" + cell.getStringCellValue());
-					loginParameter += cell.getStringCellValue().toString() + " , ";
-					// System.out.println(loginParameter[0] + " :" +
-					// cell.getStringCellValue().toString());
+					loginParameter += cell.getStringCellValue().toString() + " , "; //
+					// System.out.println(loginParameter + " :" +
+					// //cell.getStringCellValue().toString());
 
 				}
 

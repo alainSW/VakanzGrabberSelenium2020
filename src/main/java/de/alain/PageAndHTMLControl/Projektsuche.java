@@ -36,7 +36,7 @@ public class Projektsuche extends Base {
 	private WebElement ProjektSucheButtonExist;
 
 	// ProjektMaske navigieren
-	@FindBy(xpath = "//span[@class='fa fa-angle-right']")
+	@FindBy(xpath = "//span[@class='far fa-angle-right']")
 	private WebElement ProjektMaskeNavigation;
 
 	// Anzahl von Projekten
