@@ -51,12 +51,10 @@ public class TestParallelClassOne {
 	@BeforeMethod
 	public void beforeMethod() throws InterruptedException, IOException {
 		if (driver == null) {
-			// C:\SeleniumTESTDriver\geckodriver
-			/*
-			 * System.setProperty("webdriver.firefox.driver", System.getProperty("user.dir")
-			 * + "\\src\\test\\resources\\Executeable\\geckodriver.exe");
-			 */
-			System.setProperty("webdriver.firefox.driver", "C:\\SeleniumTESTDriver\\geckodriver\\geckodriver.exe");
+
+			System.setProperty("webdriver.firefox.driver",
+					System.getProperty("user.dir") + "\\src\\test\\resources\\Executeable\\geckodriver.exe");
+
 			driver = new FirefoxDriver();
 
 			/*
