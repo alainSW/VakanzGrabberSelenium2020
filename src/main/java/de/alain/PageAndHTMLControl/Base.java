@@ -1,7 +1,5 @@
 package de.alain.PageAndHTMLControl;
 
-import static org.junit.Assert.fail;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
@@ -27,7 +25,7 @@ public class Base {
 			driver.get(url);
 		} catch (WebDriverException wde) {
 			System.out.println(wde);
-			fail();
+
 		}
 	}
 
@@ -37,7 +35,7 @@ public class Base {
 			new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(element)).click();
 		} catch (WebDriverException wde) {
 			System.out.println(wde);
-			fail();
+
 		}
 	}
 
@@ -49,7 +47,7 @@ public class Base {
 			element.sendKeys(inputText);
 		} catch (WebDriverException wde) {
 			System.out.println(wde);
-			fail();
+
 		}
 	}
 
@@ -60,7 +58,7 @@ public class Base {
 
 		} catch (WebDriverException wde) {
 			System.out.println(wde);
-			fail();
+
 		}
 	}
 
@@ -163,7 +161,7 @@ public class Base {
 
 		} catch (WebDriverException wde) {
 			System.out.println(wde);
-			fail();
+
 		}
 	}
 
@@ -172,7 +170,6 @@ public class Base {
 			new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(element));
 
 		} catch (WebDriverException wde) {
-			fail();
 
 			return false;
 		}
