@@ -46,9 +46,14 @@ public class ImportAnmeldeDatenVonExcelToJava {
 			if (row.getRowNum() > 0) {
 				while (cellIterator.hasNext()) {
 					Cell cell = cellIterator.next();
+					if (cell.getStringCellValue() == "") {
+						break;
+					}
+
 					System.out.println("cell.getColumnIndex() :" + cell.getColumnIndex());
 					System.out.println("cell.getStringCellValue() :" + cell.getStringCellValue());
 					loginParameter += cell.getStringCellValue().toString() + " , "; //
+
 					// System.out.println(loginParameter + " :" +
 					// //cell.getStringCellValue().toString());
 
@@ -89,10 +94,16 @@ public class ImportAnmeldeDatenVonExcelToJava {
 
 			if (row.getRowNum() > 0) {
 				while (cellIterator.hasNext()) {
+
 					Cell cell = cellIterator.next();
+					if (cell.getStringCellValue() == "") {
+						break;
+					}
+
 					System.out.println("cell.getColumnIndex() :" + cell.getColumnIndex());
 					System.out.println("cell.getStringCellValue() :" + cell.getStringCellValue());
 					loginParameter += cell.getStringCellValue().toString() + " , ";
+
 					// System.out.println(loginParameter[0] + " :" +
 					// cell.getStringCellValue().toString());
 
