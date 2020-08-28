@@ -8,39 +8,12 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Test-class Suite</th></tr>
-<tr><td><a href="#t0">Test-class test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">128.928</td><td></td><td></td></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">162.816</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Test-class Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test-class test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">de.alain.TestNGParallel.TestParallelClassOne</td><td><a href="#m0">test_1</a></td><td rowspan="1">1598546291729</td><td rowspan="1">45058</td></tr><tr class="failedodd"><td rowspan="2">de.alain.TestNGParallel.TestParallelClassTwo</td><td><a href="#m1">test_2</a></td><td rowspan="2">1598546334737</td><td rowspan="2">2653</td></tr><tr class="failedodd"><td><a href="#m2">test_2</a></td></tr><tr><th colspan="4">Test-class test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">de.alain.TestNGParallel.TestParallelClassOne</td><td><a href="#m3">test_1</a></td><td rowspan="1">1598546336789</td><td rowspan="1">74888</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">de.alain.TestNGParallel.TestParallelClassOne</td><td><a href="#m0">test_1</a></td><td rowspan="2">1598624103476</td><td rowspan="2">49559</td></tr><tr class="passedeven"><td><a href="#m1">test_1</a></td></tr></tbody>
 </table>
-<h2>Test-class test</h2><h3 id="m0">de.alain.TestNGParallel.TestParallelClassOne#test_1</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Testautomatisierer</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at de.alain.ProjektmaskeNavigationUndProjektmerkmaleHolen.ProjektMaskeNavigationUndProjektMerkmaleHolen.listProjektInformationen(ProjektMaskeNavigationUndProjektMerkmaleHolen.java:183)
-	at de.alain.ProjektmaskeNavigationUndProjektmerkmaleHolen.ProjektMaskeNavigationUndProjektMerkmaleHolen.ProjektmaskeAnklickeUndMaskeInformationenAssortieren(ProjektMaskeNavigationUndProjektMerkmaleHolen.java:75)
-	at de.alain.TestNGParallel.TestParallelClassOne.test_1(TestParallelClassOne.java:134)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-... Removed 12 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">de.alain.TestNGParallel.TestParallelClassTwo#test_2</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Testmanager</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
-	at de.alain.ProjektStatitikUndInformationen.ProjektStatistik.EndProjektMaskeNummer(ProjektStatistik.java:40)
-	at de.alain.ProjektStatitikUndInformationen.ProjektStatistik.AnzahlDerGeneriertenMaskeJeProjektsuche(ProjektStatistik.java:69)
-	at de.alain.ProjektmaskeNavigationUndProjektmerkmaleHolen.ProjektMaskeNavigationUndProjektMerkmaleHolen.ProjektmaskeAnklickeUndMaskeInformationenAssortieren(ProjektMaskeNavigationUndProjektMerkmaleHolen.java:45)
-	at de.alain.TestNGParallel.TestParallelClassTwo.test_2(TestParallelClassTwo.java:116)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-... Removed 12 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">de.alain.TestNGParallel.TestParallelClassTwo#test_2</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>msg</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
-	at de.alain.ProjektStatitikUndInformationen.ProjektStatistik.EndProjektMaskeNummer(ProjektStatistik.java:40)
-	at de.alain.ProjektStatitikUndInformationen.ProjektStatistik.AnzahlProjektProMaske(ProjektStatistik.java:61)
-	at de.alain.ProjektmaskeNavigationUndProjektmerkmaleHolen.ProjektMaskeNavigationUndProjektMerkmaleHolen.AnzahlProjektJeMaske(ProjektMaskeNavigationUndProjektMerkmaleHolen.java:88)
-	at de.alain.ProjektmaskeNavigationUndProjektmerkmaleHolen.ProjektMaskeNavigationUndProjektMerkmaleHolen.projektClick(ProjektMaskeNavigationUndProjektMerkmaleHolen.java:119)
-	at de.alain.ProjektmaskeNavigationUndProjektmerkmaleHolen.ProjektMaskeNavigationUndProjektMerkmaleHolen.ProjektmaskeAnklickeUndMaskeInformationenAssortieren(ProjektMaskeNavigationUndProjektMerkmaleHolen.java:53)
-	at de.alain.TestNGParallel.TestParallelClassTwo.test_2(TestParallelClassTwo.java:116)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-... Removed 12 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">de.alain.TestNGParallel.TestParallelClassOne#test_1</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Leiter</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">de.alain.TestNGParallel.TestParallelClassOne#test_1</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Testautomatisierer</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">de.alain.TestNGParallel.TestParallelClassOne#test_1</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Leiter</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
