@@ -41,7 +41,7 @@ public class ImportAnmeldeDatenVonExcelToJava {
 			Row row = rowIterator.next(); // Get iterator to all cells of current row
 			Iterator<Cell> cellIterator = row.cellIterator();
 
-			System.out.println("row.getRowNum() :" + row.getRowNum());
+			// System.out.println("row.getRowNum() :" + row.getRowNum());
 
 			if (row.getRowNum() > 0) {
 				while (cellIterator.hasNext()) {
@@ -50,8 +50,9 @@ public class ImportAnmeldeDatenVonExcelToJava {
 						break;
 					}
 
-					System.out.println("cell.getColumnIndex() :" + cell.getColumnIndex());
-					System.out.println("cell.getStringCellValue() :" + cell.getStringCellValue());
+					// System.out.println("cell.getColumnIndex() :" + cell.getColumnIndex());
+					// System.out.println("cell.getStringCellValue() :" +
+					// cell.getStringCellValue());
 					loginParameter += cell.getStringCellValue().toString() + " , "; //
 
 					// System.out.println(loginParameter + " :" +
@@ -63,7 +64,7 @@ public class ImportAnmeldeDatenVonExcelToJava {
 
 		}
 
-		System.out.println(loginParameter);
+		// System.out.println(loginParameter);
 		return loginParameter.split(" , ");
 	}
 
@@ -90,7 +91,7 @@ public class ImportAnmeldeDatenVonExcelToJava {
 			// Get iterator to all cells of current row
 			Iterator<Cell> cellIterator = row.cellIterator();
 
-			System.out.println("row.getRowNum() :" + row.getRowNum());
+			// System.out.println("row.getRowNum() :" + row.getRowNum());
 
 			if (row.getRowNum() > 0) {
 				while (cellIterator.hasNext()) {
@@ -100,8 +101,9 @@ public class ImportAnmeldeDatenVonExcelToJava {
 						break;
 					}
 
-					System.out.println("cell.getColumnIndex() :" + cell.getColumnIndex());
-					System.out.println("cell.getStringCellValue() :" + cell.getStringCellValue());
+					// System.out.println("cell.getColumnIndex() :" + cell.getColumnIndex());
+					// System.out.println("cell.getStringCellValue() :" +
+					// cell.getStringCellValue());
 					loginParameter += cell.getStringCellValue().toString() + " , ";
 
 					// System.out.println(loginParameter[0] + " :" +
@@ -113,7 +115,7 @@ public class ImportAnmeldeDatenVonExcelToJava {
 
 		}
 
-		System.out.println(loginParameter);
+		// System.out.println(loginParameter);
 		return loginParameter.split(" , ");
 	}
 

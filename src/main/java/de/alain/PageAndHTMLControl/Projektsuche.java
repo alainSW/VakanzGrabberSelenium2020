@@ -71,7 +71,8 @@ public class Projektsuche extends Base {
 
 	// Projekt finden Eingabefelder Existenz prüfen
 	public String projektFindenEingabeFelderExist() {
-		System.out.println(selectgetAttributByPlaceholder(ProjektFindenEingabeFelderExist, 10));
+		// System.out.println(selectgetAttributByPlaceholder(ProjektFindenEingabeFelderExist,
+		// 10));
 		return selectgetAttributByPlaceholder(ProjektFindenEingabeFelderExist, 10);
 	}
 
@@ -82,7 +83,7 @@ public class Projektsuche extends Base {
 
 	// Projekt Suche Button Existenz prüfen
 	public String projektSucheButtonExist() {
-		System.out.println(selectgetText(ProjektSucheButtonExist, 10));
+		// System.out.println(selectgetText(ProjektSucheButtonExist, 10));
 		return selectgetText(ProjektSucheButtonExist, 10);
 	}
 
@@ -93,20 +94,22 @@ public class Projektsuche extends Base {
 
 	// AnzahlProjekte Global Übersicht
 	public static String anzahlProjekt() {
-		System.out.println("anzahlProjekt  :" + selectgetText(AnzahlGefundenProjekten, 10));
+		// System.out.println("anzahlProjekt :" + selectgetText(AnzahlGefundenProjekten,
+		// 10));
 		return selectgetText(AnzahlGefundenProjekten, 10);
 	}
 
 	// List der Projekte pro Maske
 
 	public String projektliste() {
-		System.out.println("selectgetText(ProjektlisteProMaske, 10) 1 \n  :" + selectgetText(ProjektlisteProMaske, 10));
+		// System.out.println("selectgetText(ProjektlisteProMaske, 10) 1 \n :" +
+		// selectgetText(ProjektlisteProMaske, 10));
 		return selectgetAttributById(ProjektlisteProMaske, 10);
 	}
 
 	// ProProjektErgebnissejekt
 	public String projektErgebnisse() {
-		System.out.println(selectgetAttributByValue(ProjektErgebnisse, 10));
+		// System.out.println(selectgetAttributByValue(ProjektErgebnisse, 10));
 		return selectgetAttributByValue(ProjektErgebnisse, 10);
 	}
 

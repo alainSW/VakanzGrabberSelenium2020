@@ -1,24 +1,34 @@
 package de.alain.TestNGParallel;
 
-import static org.testng.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
 import de.alain.CreateExcelFile.ExportProjektInformationenToExcel;
 import de.alain.CreateExcelFile.ImportAnmeldeDatenVonExcelToJava;
+import de.alain.LoggerHandling.ExtentLogging;
 import de.alain.PageAndHTMLControl.CookiesHandling;
 import de.alain.PageAndHTMLControl.Login;
 import de.alain.PageAndHTMLControl.Projektmerkmale;
 import de.alain.PageAndHTMLControl.Projektsuche;
 import de.alain.ProjektStatitikUndInformationen.ProjektStatistik;
 import de.alain.ProjektmaskeNavigationUndProjektmerkmaleHolen.ProjektMaskeNavigationUndProjektMerkmaleHolen;
+import de.alain.Screenshot.Utility;
 
 public class TestParallelClassOne {
 	private WebDriver driver;
@@ -39,6 +49,7 @@ public class TestParallelClassOne {
 	ProjektMaskeNavigationUndProjektMerkmaleHolen projektMaskeNavigationUndProjektMerkmaleHolen;
 
 	ImportAnmeldeDatenVonExcelToJava importAnmeldeDatenVonExcelToJava;
+
 	StackTraceElement[] stackTrace;
 	public String dataProviderParameter = "";
 
@@ -47,6 +58,22 @@ public class TestParallelClassOne {
 	private String LastElementDataProvider = "";
 
 	private String Webseite = "";
+
+	public ExtentReports extent;
+	public ExtentTest logger;
+
+	@BeforeTest
+	public void setup() {
+		System.out.println("login to google");
+
+		ExtentHtmlReporter reporter = new ExtentHtmlReporter("./Reports/learn_automation2.html");
+		extent = new ExtentReports();
+		extent.attachReporter(reporter);
+		extent.setSystemInfo("Host Name", "LocaHost");
+		extent.setSystemInfo("Environment", "QA");
+		extent.setSystemInfo("User Name", "Testautomatisierer");
+
+	}
 
 	@BeforeMethod
 	public void beforeMethod() throws InterruptedException, IOException {
@@ -86,69 +113,110 @@ public class TestParallelClassOne {
 		return new Object[][] { { FirstElementDataProvider }, { LastElementDataProvider } };
 	}
 
-	/*
-	 * @DataProvider(name = "data-provider") public Object[][] dataProviderMethod()
-	 * throws IOException { FirstElementDataProvider =
-	 * ImportAnmeldeDatenVonExcelToJava2.getProjektsuchbegriffToExcel()[1][1];
-	 * EmailAdresse =
-	 * ImportAnmeldeDatenVonExcelToJava2.getAnmeldeDatenToExcel()[1][0]; Passwort =
-	 * ImportAnmeldeDatenVonExcelToJava2.getAnmeldeDatenToExcel()[1][1]; Object[][]
-	 * data = ImportAnmeldeDatenVonExcelToJava2.getProjektsuchbegriffToExcel();
-	 * 
-	 * return data; }
-	 */
-
 	@Test(dataProvider = "data-provider")
 	public void test_1(String data) throws InterruptedException, IOException {
 
 		stackTrace = new Throwable().getStackTrace();
+
+		logger = extent.createTest(stackTrace[0].getMethodName() + "_" + data);
 		dataProviderParameter = data;
 
 		if (dataProviderParameter.equals(FirstElementDataProvider)) {
 			// Aktion: Browser-> Web Seite anklicken
+
+			logger.log(Status.INFO, "Oeffnen der Webseite : " + Webseite);
 			login.visit(Webseite);
+			logger.log(Status.PASS, "WebSeite ist erfolgreich geöffnen.");
 			Thread.sleep(3000);
+
 			// Cookies Handling
+			logger.log(Status.INFO, "Cookies bestätgen : ");
 			cookiesHandling.IscookiesButtonExistAcceptButtonDrücken();
+			logger.log(Status.PASS, "Cookies ist erfolgreich betätigt. ");
+
 			// Aktion: Login
+			logger.log(Status.INFO, "Login-Button: Existenz pruefen ");
 			login.isEingeloggtOrNot();
+			logger.log(Status.PASS, "Login-Button existiert");
+
+			logger.log(Status.INFO, "Login-Button: druecken");
 			login.loginButton();
-			login.isLoginMaskeExist(); // Es wird geprüft, ob die Maske-Login existiert
+			logger.log(Status.PASS, "Login-Button ist erfolgreich gedrueckt worden. ");
+
+			logger.log(Status.INFO, "Login-Maske: Existenz pruefen ");
+			login.isLoginMaskeExist(); // Es wird geprueft, ob die Maske-Login existiert
+			logger.log(Status.PASS, "Login-Maske existiert");
+
+			logger.log(Status.INFO, "Anmeldename eingeben ");
 			login.typeMail(ImportAnmeldeDatenVonExcelToJava.getAnmeldeDatenToExcel()[0]); // User-Name//E-Mail eingeben
+			logger.log(Status.PASS, "Anmeldename ist erfolgreich eingegeben.");
+
+			logger.log(Status.INFO, "Passwort eingeben ");
 			login.typePasswort(ImportAnmeldeDatenVonExcelToJava.getAnmeldeDatenToExcel()[1]);// Passwort eingeben
-			login.anmelden(); // Anmeldebutton drücken
+			logger.log(Status.PASS, "Passwort ist erfolgreich eingegeben worden.");
+
+			logger.log(Status.INFO, "Anmelde-Button druecken ");
+			login.anmelden(); // Anmeldebutton druecken
+			logger.log(Status.INFO, "Anmelde-Button ist gefolgreich gedrueckt worden.");
 
 		}
 
-		// Es wird geprüft, ob man korrekt eingeloggt ist?
-		assertTrue(login.isEmailVisible());
+		// Es wird geprueft, ob man korrekt eingeloggt ist?
+		logger.log(Status.INFO, "Pruefe, ob man eingeloggt ist. ");
+		assertFalse(login.isEmailVisible());
+		logger.log(Status.PASS, "man ist erfolgreich engeloggt   .");
 
 		// Freelance.de Maske: Projekt finden
 		// projektsuche.isProjektFindenEingabenfelderExistAndprojektSucheButtonExist();
 		projektsuche.clickFreelanceDe();
+
+		logger.log(Status.INFO, "Pruefe, ob Projekt Suchfelder existiert");
 		projektsuche.isProjektFindenEingabenfelderExistAndprojektSucheButtonExist();
+		logger.log(Status.PASS, "Projekt Suchfelde existiert worden");
+
+		logger.log(Status.INFO, "Projekt Suchbegriff eingeben");
 		projektsuche.typeProjekt(data);// leiter // Testautomatisierer
+		logger.log(Status.PASS, "Projekt Suchbegriff ist erfolgreich eingeben  worden");
+
+		logger.log(Status.INFO, "Suche-Button druecken");
 		projektsuche.clickSuche();
+		logger.log(Status.PASS, "Suche-Button ist erfolgreich gedrueckt worden");
 
 		System.out.println("llllll " + driver.getCurrentUrl().split("https://www.")[1].split("/")[0].toString());
 		// Maske navigieren und Projektinformationen aussortieren
+
+		logger.log(Status.INFO, "Projektsergebnisse durchklicken");
 		ProjektMaskeNavigationUndProjektMerkmaleHolen.ProjektmaskeAnklickeUndMaskeInformationenAssortieren(projektsuche,
 				driver, projektmerkmale, data);
+		logger.log(Status.PASS, "Projektsergebnisse sind erfolgreich anklickt worden");
 
-		// Projektinformationen in der Datenbank übertragen
+		// Projektinformationen in der Datenbank uebertragen
 		ExportProjektInformationenToExcel.TextMethodeName(
 				projektsuche.projektErgebnisse() + "_" + stackTrace[0].getMethodName(), data,
 				driver.getCurrentUrl().split("https://www.")[1].split("/")[0].toString());
-		ExportProjektInformationenToExcel.Excel();
 
+		logger.log(Status.INFO, "Projektsergebnisse in Excel exportiert");
+		ExportProjektInformationenToExcel.Excel();
+		logger.log(Status.PASS, "Export der Daten erfolgreich");
 	}
 
 	@AfterMethod
-	public void afterMethod() throws InterruptedException, IOException {
+	public void afterMethod(ITestResult result) throws InterruptedException, IOException {
+
+		String ScreenshotPath = Utility.getScreenshot(driver, result.getName());
+
+		ExtentLogging.getResultWithScreenshotByFailTest(result, logger, ScreenshotPath, driver);
+
 		if (dataProviderParameter.equals(LastElementDataProvider)) {
 			Thread.sleep(3000);
 			driver.quit();
 		}
+
+	}
+
+	@AfterTest
+	public void EndTest() {
+		extent.flush();
 
 	}
 

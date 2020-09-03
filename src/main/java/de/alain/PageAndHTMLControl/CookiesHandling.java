@@ -26,7 +26,7 @@ public class CookiesHandling extends Base {
 
 	// cookiesButton Existenz prüfen
 	public String cookiesButtonExistPrüfen() {
-		System.out.println(selectgetText(cookiesButtonExist, 10));
+		// System.out.println(selectgetText(cookiesButtonExist, 10));
 		return selectgetText(cookiesButtonExist, 10);
 	}
 

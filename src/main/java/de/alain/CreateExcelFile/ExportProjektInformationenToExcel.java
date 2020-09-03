@@ -97,8 +97,8 @@ public class ExportProjektInformationenToExcel {
 		for (ProjektInformationen pr : list) {
 			rownum++;
 			row = sheet.createRow(rownum);
-			System.out.println(rownum);
-			System.out.println(pr);
+			// System.out.println(rownum);
+			// System.out.println(pr);
 			// ProjektNum (A)
 			cell = row.createCell(0, CellType.NUMERIC);
 			cell.setCellValue(rownum);

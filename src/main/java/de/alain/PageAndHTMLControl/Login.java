@@ -82,7 +82,7 @@ public class Login extends Base {
 
 	// EmailEingabeFelder Existenz prüfen
 	public String EmailEingabeFelderExistenzPrüfen() {
-		System.out.println(selectgetText(emailEingabeFelderExist, 10));
+		// System.out.println(selectgetText(emailEingabeFelderExist, 10));
 		return selectgetText(emailEingabeFelderExist, 10);
 	}
 
@@ -99,7 +99,7 @@ public class Login extends Base {
 
 	// PasswortEingabeFelder Existenz prüfen
 	public String PasswortEingabeFelderExistenzPrüfen() {
-		System.out.println(selectgetText(passwortEingabeFelderExist, 10));
+		// System.out.println(selectgetText(passwortEingabeFelderExist, 10));
 		return selectgetText(passwortEingabeFelderExist, 10);
 	}
 
@@ -116,7 +116,7 @@ public class Login extends Base {
 
 	// eingeloggt bleiben Checkbox Existenz prüfen
 	public String EingeloggenBleibenCheckboxExistenzPrüfen() {
-		System.out.println(selectgetText(eingeloggenBleibenCheckboxExist, 10));
+		// System.out.println(selectgetText(eingeloggenBleibenCheckboxExist, 10));
 		return selectgetText(eingeloggenBleibenCheckboxExist, 10);
 	}
 
@@ -133,7 +133,7 @@ public class Login extends Base {
 
 	// AnmeldeButton Existenz prüfen
 	public String AnmeldeButtonExistenzPrüfen() {
-		System.out.println(selectgetAttributByValue(anmeldeButtonExist, 10));
+		// System.out.println(selectgetAttributByValue(anmeldeButtonExist, 10));
 		return selectgetAttributByValue(anmeldeButtonExist, 10);
 	}
 
