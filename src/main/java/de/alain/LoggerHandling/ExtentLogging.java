@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
+import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -64,6 +65,7 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 public class ExtentLogging {
 
+	@Test
 	public static void getResultWithScreenshotByFailTest(ITestResult getMethodName, ExtentTest logger,
 			String ScreenshotPath, WebDriver driver) throws IOException {
 		// Diese Methode ergibt das finale Ergebnis jedes TestSteps
