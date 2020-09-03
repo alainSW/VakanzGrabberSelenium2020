@@ -21,12 +21,14 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 import de.alain.CreateExcelFile.ExportProjektInformationenToExcel;
 import de.alain.CreateExcelFile.ImportAnmeldeDatenVonExcelToJava;
+import de.alain.LoggerHandling.ExtentLogging;
 import de.alain.PageAndHTMLControl.CookiesHandling;
 import de.alain.PageAndHTMLControl.Login;
 import de.alain.PageAndHTMLControl.Projektmerkmale;
 import de.alain.PageAndHTMLControl.Projektsuche;
 import de.alain.ProjektStatitikUndInformationen.ProjektStatistik;
 import de.alain.ProjektmaskeNavigationUndProjektmerkmaleHolen.ProjektMaskeNavigationUndProjektMerkmaleHolen;
+import de.alain.Screenshot.Utility;
 
 public class TestParallelClassOne {
 	private WebDriver driver;
@@ -201,10 +203,9 @@ public class TestParallelClassOne {
 	@AfterMethod
 	public void afterMethod(ITestResult result) throws InterruptedException, IOException {
 
-		// String ScreenshotPath = Utility.getScreenshot(driver, result.getName());
+		String ScreenshotPath = Utility.getScreenshot(driver, result.getName());
 
-		// ExtentLogging.getResultWithScreenshotByFailTest(result, logger,
-		// ScreenshotPath, driver);
+		ExtentLogging.getResultWithScreenshotByFailTest(result, logger, ScreenshotPath, driver);
 
 		if (dataProviderParameter.equals(LastElementDataProvider)) {
 			Thread.sleep(3000);
