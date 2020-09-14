@@ -1,21 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[All test Execution started]]>
+    </line>
+    <line>
+      <![CDATA[Starting test is test_1]]>
+    </line>
+    <line>
+      <![CDATA[Test failed test_1]]>
+    </line>
+    <line>
+      <![CDATA[Starting test is test_1]]>
+    </line>
+    <line>
+      <![CDATA[Test failed test_1]]>
+    </line>
   </reporter-output>
-  <suite started-at="2020-09-03T16:50:53 CEST" name="Default suite" finished-at="2020-09-03T16:51:12 CEST" duration-ms="19157">
+  <suite started-at="2020-09-11T15:34:33 CEST" name="Default suite" finished-at="2020-09-11T15:34:50 CEST" duration-ms="17102">
     <groups>
     </groups>
-    <test started-at="2020-09-03T16:50:53 CEST" name="Default test" finished-at="2020-09-03T16:51:12 CEST" duration-ms="19157">
+    <test started-at="2020-09-11T15:34:33 CEST" name="Default test" finished-at="2020-09-11T15:34:50 CEST" duration-ms="17102">
       <class name="de.alain.TestNGParallel.TestParallelClassOne">
-        <test-method is-config="true" signature="setup()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@3e11f9e9]" started-at="2020-09-03T16:50:53 CEST" name="setup" finished-at="2020-09-03T16:50:53 CEST" duration-ms="239" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06]" started-at="2020-09-11T15:34:33 CEST" name="setup" finished-at="2020-09-11T15:34:33 CEST" duration-ms="171" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@3e11f9e9]" started-at="2020-09-03T16:50:53 CEST" name="beforeMethod" finished-at="2020-09-03T16:50:59 CEST" duration-ms="5633" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06]" started-at="2020-09-11T15:34:33 CEST" name="beforeMethod" finished-at="2020-09-11T15:34:37 CEST" duration-ms="4360" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@3e11f9e9]" started-at="2020-09-03T16:50:59 CEST" name="test_1" data-provider="data-provider" finished-at="2020-09-03T16:51:06 CEST" duration-ms="7438" status="FAIL">
+        <test-method signature="test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06]" started-at="2020-09-11T15:34:37 CEST" name="test_1" data-provider="data-provider" finished-at="2020-09-11T15:34:45 CEST" duration-ms="7669" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -23,16 +38,16 @@
               </value>
             </param>
           </params>
-          <exception class="org.opentest4j.AssertionFailedError">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected: <false> but was: <true>]]>
+              <![CDATA[expected [false] but found [true]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:36)
-at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:42)
-at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:37)
-at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:163)
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.failNotEquals(Assert.java:968)
+at org.testng.Assert.assertFalse(Assert.java:65)
+at org.testng.Assert.assertFalse(Assert.java:75)
 at de.alain.TestNGParallel.TestParallelClassOne.test_1(TestParallelClassOne.java:166)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -64,43 +79,49 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.opentest4j.AssertionFailedError -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
+            <line>
+              <![CDATA[Starting test is test_1]]>
+            </line>
+            <line>
+              <![CDATA[Test failed test_1]]>
+            </line>
           </reporter-output>
         </test-method> <!-- test_1 -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@3e11f9e9]" started-at="2020-09-03T16:51:07 CEST" name="afterMethod" finished-at="2020-09-03T16:51:07 CEST" duration-ms="568" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06]" started-at="2020-09-11T15:34:45 CEST" name="afterMethod" finished-at="2020-09-11T15:34:45 CEST" duration-ms="224" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test_1 status=FAILURE method=TestParallelClassOne.test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@3e11f9e9] output={null}]]]>
+                <![CDATA[[TestResult name=test_1 status=FAILURE method=TestParallelClassOne.test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06] output=Starting test is test_1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@3e11f9e9]" started-at="2020-09-03T16:51:07 CEST" name="beforeMethod" finished-at="2020-09-03T16:51:07 CEST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06]" started-at="2020-09-11T15:34:45 CEST" name="beforeMethod" finished-at="2020-09-11T15:34:45 CEST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@3e11f9e9]" started-at="2020-09-03T16:51:07 CEST" name="test_1" data-provider="data-provider" finished-at="2020-09-03T16:51:07 CEST" duration-ms="38" status="FAIL">
+        <test-method signature="test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06]" started-at="2020-09-11T15:34:45 CEST" name="test_1" data-provider="data-provider" finished-at="2020-09-11T15:34:45 CEST" duration-ms="27" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Leiter]]>
+                <![CDATA[Testanalyst]]>
               </value>
             </param>
           </params>
-          <exception class="org.opentest4j.AssertionFailedError">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected: <false> but was: <true>]]>
+              <![CDATA[expected [false] but found [true]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:36)
-at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:42)
-at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:37)
-at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:163)
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.failNotEquals(Assert.java:968)
+at org.testng.Assert.assertFalse(Assert.java:65)
+at org.testng.Assert.assertFalse(Assert.java:75)
 at de.alain.TestNGParallel.TestParallelClassOne.test_1(TestParallelClassOne.java:166)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -132,22 +153,28 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.opentest4j.AssertionFailedError -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
+            <line>
+              <![CDATA[Starting test is test_1]]>
+            </line>
+            <line>
+              <![CDATA[Test failed test_1]]>
+            </line>
           </reporter-output>
         </test-method> <!-- test_1 -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@3e11f9e9]" started-at="2020-09-03T16:51:07 CEST" name="afterMethod" finished-at="2020-09-03T16:51:12 CEST" duration-ms="4656" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06]" started-at="2020-09-11T15:34:45 CEST" name="afterMethod" finished-at="2020-09-11T15:34:50 CEST" duration-ms="4234" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test_1 status=FAILURE method=TestParallelClassOne.test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@3e11f9e9] output={null}]]]>
+                <![CDATA[[TestResult name=test_1 status=FAILURE method=TestParallelClassOne.test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06] output=Starting test is test_1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="EndTest()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@3e11f9e9]" started-at="2020-09-03T16:51:12 CEST" name="EndTest" finished-at="2020-09-03T16:51:12 CEST" duration-ms="317" status="PASS">
+        <test-method is-config="true" signature="EndTest()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06]" started-at="2020-09-11T15:34:50 CEST" name="EndTest" finished-at="2020-09-11T15:34:50 CEST" duration-ms="220" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EndTest -->

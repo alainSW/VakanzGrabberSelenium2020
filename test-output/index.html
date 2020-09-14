@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\awangueu\AppData\Local\Temp\testng-eclipse--1371077686\testng-customsuite.xml</span>
+                    <span>C:\Users\awangueu\AppData\Local\Temp\testng-eclipse-914948247\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -109,7 +109,7 @@
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="de.alain.TestNGParallel.TestParallelClassOne" class="method navigator-link" hash-for-method="test_1(Leiter)">test_1(Leiter)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="de.alain.TestNGParallel.TestParallelClassOne" class="method navigator-link" hash-for-method="test_1(Testanalyst)">test_1(Testanalyst)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -136,11 +136,11 @@
                   </a> <!-- test_1(Testautomatisierer) -->
                   <span class="method-name">test_1</span>
                   <span class="parameters">(Testautomatisierer)</span>
-                  <div class="stack-trace">org.opentest4j.AssertionFailedError: expected: &lt;false&gt; but was: &lt;true&gt;
-	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:42)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:37)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:163)
+                  <div class="stack-trace">java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:968)
+	at org.testng.Assert.assertFalse(Assert.java:65)
+	at org.testng.Assert.assertFalse(Assert.java:75)
 	at de.alain.TestNGParallel.TestParallelClassOne.test_1(TestParallelClassOne.java:166)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -176,15 +176,15 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="test_1(Leiter)">
-                  </a> <!-- test_1(Leiter) -->
+                  <a name="test_1(Testanalyst)">
+                  </a> <!-- test_1(Testanalyst) -->
                   <span class="method-name">test_1</span>
-                  <span class="parameters">(Leiter)</span>
-                  <div class="stack-trace">org.opentest4j.AssertionFailedError: expected: &lt;false&gt; but was: &lt;true&gt;
-	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:36)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:42)
-	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:37)
-	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:163)
+                  <span class="parameters">(Testanalyst)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:968)
+	at org.testng.Assert.assertFalse(Assert.java:65)
+	at org.testng.Assert.assertFalse(Assert.java:75)
 	at de.alain.TestNGParallel.TestParallelClassOne.test_1(TestParallelClassOne.java:166)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -223,7 +223,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\awangueu\AppData\Local\Temp\testng-eclipse--1371077686\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\awangueu\AppData\Local\Temp\testng-eclipse-914948247\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -276,11 +276,11 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'test_1')
 data.setCell(0, 2, 'de.alain.TestNGParallel.TestParallelClassOne')
-data.setCell(0, 3, 7438);
+data.setCell(0, 3, 7669);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'test_1')
 data.setCell(1, 2, 'de.alain.TestNGParallel.TestParallelClassOne')
-data.setCell(1, 3, 38);
+data.setCell(1, 3, 27);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -296,6 +296,20 @@ return data;
             <span class="header-content">Reporter output for Default suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">test_1(Testautomatisierer)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Starting test is test_1</span>
+                <span class="reporter-method-output">Test failed test_1</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">test_1(Testanalyst)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Starting test is test_1</span>
+                <span class="reporter-method-output">Test failed test_1</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
@@ -318,35 +332,35 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">488 ms</span>
+                <span class="method-start">354 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">test_1(Testautomatisierer)</span>
-                <span class="method-start">6122 ms</span>
+                <span class="method-start">4715 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=test_1 status=FAILURE method=TestParallelClassOne.test_1(java.lang.String)[pri:0, i...)</span>
-                <span class="method-start">13566 ms</span>
+                <span class="method-start">12389 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">14135 ms</span>
+                <span class="method-start">12613 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">test_1(Leiter)</span>
-                <span class="method-start">14135 ms</span>
+                <span class="method-name">test_1(Testanalyst)</span>
+                <span class="method-start">12614 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=test_1 status=FAILURE method=TestParallelClassOne.test_1(java.lang.String)[pri:0, i...)</span>
-                <span class="method-start">14176 ms</span>
+                <span class="method-start">12643 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">EndTest</span>
-                <span class="method-start">18834 ms</span>
+                <span class="method-start">16878 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
