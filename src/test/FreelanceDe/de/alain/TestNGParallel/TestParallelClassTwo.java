@@ -127,32 +127,34 @@ public class TestParallelClassTwo {
 
 			// Cookies Handling
 			logger.log(Status.INFO, "Cookies bestaetgen : ");
-			cookiesHandling.IscookiesButtonExistAcceptButtonDrücken();
+			cookiesHandling.IscookiesButtonExistAcceptButtonDrücken(logger);
 			logger.log(Status.PASS, "Cookies ist erfolgreich betaetigt. ");
 
 			// Aktion: Login
 			logger.log(Status.INFO, "Login-Button: Existenz pruefen ");
-			login.isLoginButtonExist();
+			login.isLoginButtonExist(logger);
 			logger.log(Status.PASS, "Login-Button existiert");
 
 			logger.log(Status.INFO, "Login-Button: druecken");
-			login.loginButtonDruecken();
+			login.loginButtonDruecken(logger);
 			logger.log(Status.PASS, "Login-Button ist erfolgreich gedrueckt worden. ");
 
 			logger.log(Status.INFO, "Login-Maske: Existenz pruefen ");
-			login.isLoginMaskeExist(); // Es wird geprueft, ob die Maske-Login existiert
+			login.isLoginMaskeExist(logger); // Es wird geprueft, ob die Maske-Login existiert
 			logger.log(Status.PASS, "Login-Maske existiert");
 
 			logger.log(Status.INFO, "Anmeldename eingeben ");
-			login.typeMail(ImportAnmeldeDatenVonExcelToJava.getAnmeldeDatenToExcel()[0]); // User-Name//E-Mail eingeben
+			login.typeMail(ImportAnmeldeDatenVonExcelToJava.getAnmeldeDatenToExcel()[0], logger); // User-Name//E-Mail
+																									// eingeben
 			logger.log(Status.PASS, "Anmeldename ist erfolgreich eingegeben.");
 
 			logger.log(Status.INFO, "Passwort eingeben ");
-			login.typePasswort(ImportAnmeldeDatenVonExcelToJava.getAnmeldeDatenToExcel()[1]);// Passwort eingeben
+			login.typePasswort(ImportAnmeldeDatenVonExcelToJava.getAnmeldeDatenToExcel()[1], logger);// Passwort
+																										// eingeben
 			logger.log(Status.PASS, "Passwort ist erfolgreich eingegeben worden.");
 
 			logger.log(Status.INFO, "Anmelde-Button druecken ");
-			login.anmelden(); // Anmeldebutton druecken
+			login.anmelden(logger); // Anmeldebutton druecken
 			logger.log(Status.INFO, "Anmelde-Button ist erfolgreich gedrueckt worden.");
 
 		}
@@ -167,18 +169,17 @@ public class TestParallelClassTwo {
 		projektsuche.clickFreelanceDe();
 
 		logger.log(Status.INFO, "Pruefe, ob Projekt Suchfelder existiert");
-		projektsuche.isProjektFindenEingabenfelderExistAndprojektSucheButtonExist();
+		projektsuche.isProjektFindenEingabenfelderExistAndprojektSucheButtonExist(logger);
 		logger.log(Status.PASS, "Projekt Suchfelde existiert worden");
 
 		logger.log(Status.INFO, "Projekt Suchbegriff eingeben");
-		projektsuche.typeProjekt(data);// leiter // Testautomatisierer
+		projektsuche.typeProjekt(data, logger);// leiter // Testautomatisierer
 		logger.log(Status.PASS, "Projekt Suchbegriff ist erfolgreich eingeben  worden");
 
 		logger.log(Status.INFO, "Suche-Button druecken");
-		projektsuche.clickSuche();
+		projektsuche.clickSuche(logger);
 		logger.log(Status.PASS, "Suche-Button ist erfolgreich gedrueckt worden");
 
-		System.out.println("llllll " + driver.getCurrentUrl().split("https://www.")[1].split("/")[0].toString());
 		// Maske navigieren und Projektinformationen aussortieren
 
 		logger.log(Status.INFO, "Projektsergebnisse durchklicken");

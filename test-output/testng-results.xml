@@ -17,20 +17,20 @@
       <![CDATA[Test failed test_1]]>
     </line>
   </reporter-output>
-  <suite started-at="2020-09-11T15:34:33 CEST" name="Default suite" finished-at="2020-09-11T15:34:50 CEST" duration-ms="17102">
+  <suite started-at="2020-09-25T15:19:57 CEST" name="Default suite" finished-at="2020-09-25T15:20:16 CEST" duration-ms="18452">
     <groups>
     </groups>
-    <test started-at="2020-09-11T15:34:33 CEST" name="Default test" finished-at="2020-09-11T15:34:50 CEST" duration-ms="17102">
+    <test started-at="2020-09-25T15:19:57 CEST" name="Default test" finished-at="2020-09-25T15:20:16 CEST" duration-ms="18452">
       <class name="de.alain.TestNGParallel.TestParallelClassOne">
-        <test-method is-config="true" signature="setup()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06]" started-at="2020-09-11T15:34:33 CEST" name="setup" finished-at="2020-09-11T15:34:33 CEST" duration-ms="171" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06]" started-at="2020-09-25T15:19:57 CEST" name="setup" finished-at="2020-09-25T15:19:58 CEST" duration-ms="174" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06]" started-at="2020-09-11T15:34:33 CEST" name="beforeMethod" finished-at="2020-09-11T15:34:37 CEST" duration-ms="4360" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06]" started-at="2020-09-25T15:19:58 CEST" name="beforeMethod" finished-at="2020-09-25T15:20:03 CEST" duration-ms="5510" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06]" started-at="2020-09-11T15:34:37 CEST" name="test_1" data-provider="data-provider" finished-at="2020-09-11T15:34:45 CEST" duration-ms="7669" status="FAIL">
+        <test-method signature="test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06]" started-at="2020-09-25T15:20:03 CEST" name="test_1" data-provider="data-provider" finished-at="2020-09-25T15:20:11 CEST" duration-ms="7738" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -48,7 +48,7 @@ at org.testng.Assert.fail(Assert.java:97)
 at org.testng.Assert.failNotEquals(Assert.java:968)
 at org.testng.Assert.assertFalse(Assert.java:65)
 at org.testng.Assert.assertFalse(Assert.java:75)
-at de.alain.TestNGParallel.TestParallelClassOne.test_1(TestParallelClassOne.java:166)
+at de.alain.TestNGParallel.TestParallelClassOne.test_1(TestParallelClassOne.java:168)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -89,7 +89,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- test_1 -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06]" started-at="2020-09-11T15:34:45 CEST" name="afterMethod" finished-at="2020-09-11T15:34:45 CEST" duration-ms="224" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06]" started-at="2020-09-25T15:20:11 CEST" name="afterMethod" finished-at="2020-09-25T15:20:11 CEST" duration-ms="265" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -100,11 +100,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06]" started-at="2020-09-11T15:34:45 CEST" name="beforeMethod" finished-at="2020-09-11T15:34:45 CEST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06]" started-at="2020-09-25T15:20:11 CEST" name="beforeMethod" finished-at="2020-09-25T15:20:11 CEST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06]" started-at="2020-09-11T15:34:45 CEST" name="test_1" data-provider="data-provider" finished-at="2020-09-11T15:34:45 CEST" duration-ms="27" status="FAIL">
+        <test-method signature="test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06]" started-at="2020-09-25T15:20:11 CEST" name="test_1" data-provider="data-provider" finished-at="2020-09-25T15:20:11 CEST" duration-ms="30" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -122,7 +122,7 @@ at org.testng.Assert.fail(Assert.java:97)
 at org.testng.Assert.failNotEquals(Assert.java:968)
 at org.testng.Assert.assertFalse(Assert.java:65)
 at org.testng.Assert.assertFalse(Assert.java:75)
-at de.alain.TestNGParallel.TestParallelClassOne.test_1(TestParallelClassOne.java:166)
+at de.alain.TestNGParallel.TestParallelClassOne.test_1(TestParallelClassOne.java:168)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -163,7 +163,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- test_1 -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06]" started-at="2020-09-11T15:34:45 CEST" name="afterMethod" finished-at="2020-09-11T15:34:50 CEST" duration-ms="4234" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06]" started-at="2020-09-25T15:20:11 CEST" name="afterMethod" finished-at="2020-09-25T15:20:16 CEST" duration-ms="4278" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -174,7 +174,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="EndTest()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06]" started-at="2020-09-11T15:34:50 CEST" name="EndTest" finished-at="2020-09-11T15:34:50 CEST" duration-ms="220" status="PASS">
+        <test-method is-config="true" signature="EndTest()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@957e06]" started-at="2020-09-25T15:20:16 CEST" name="EndTest" finished-at="2020-09-25T15:20:16 CEST" duration-ms="260" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EndTest -->

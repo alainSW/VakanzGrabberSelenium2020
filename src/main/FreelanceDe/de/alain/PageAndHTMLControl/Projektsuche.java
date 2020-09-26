@@ -17,6 +17,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
 import de.alain.BaseClass.Base;
 
 public class Projektsuche extends Base {
@@ -67,25 +70,26 @@ public class Projektsuche extends Base {
 	}
 
 	// Projekt eingeben
-	public void typeProjekt(String inputText) {
+	public void typeProjekt(String inputText, ExtentTest logger) {
+		logger.log(Status.INFO, "Es wird der Suchbegriff " + inputText + " im Eingabefeld <Projekt finden> eingeben");
 		type(ProjektFinden, 10, inputText);
 	}
 
 	// Projekt finden Eingabefelder Existenz prüfen
-	public String projektFindenEingabeFelderExist() {
-		// System.out.println(selectgetAttributByPlaceholder(ProjektFindenEingabeFelderExist,
-		// 10));
+	public String projektFindenEingabeFelderExist(ExtentTest logger) {
+		logger.log(Status.INFO, "Es wird geprueft, ob das Eingabefeld: <Projektfinden> existiert.");
 		return selectgetAttributByPlaceholder(ProjektFindenEingabeFelderExist, 10);
 	}
 
 	// Projektsuche drücken
-	public void clickSuche() {
+	public void clickSuche(ExtentTest logger) {
+		logger.log(Status.INFO, "Der Suchbutton wrd gedrueckt.");
 		click(ProjektSucheButton, 10);
 	}
 
 	// Projekt Suche Button Existenz prüfen
-	public String projektSucheButtonExist() {
-		// System.out.println(selectgetText(ProjektSucheButtonExist, 10));
+	public String projektSucheButtonExist(ExtentTest logger) {
+		logger.log(Status.INFO, "Es wird geprueft, ob der Button: <Suche> existiert.");
 		return selectgetText(ProjektSucheButtonExist, 10);
 	}
 
@@ -117,15 +121,17 @@ public class Projektsuche extends Base {
 
 	// Prüfe Eingabenfelder zum Projekt suchen und Button suche existiert
 
-	public void isProjektFindenEingabenfelderExistAndprojektSucheButtonExist() {
+	public void isProjektFindenEingabenfelderExistAndprojektSucheButtonExist(ExtentTest logger) {
 		new WebDriverWait(driver, 3);
 
-		if (projektFindenEingabeFelderExist().equals("Projekte finden") && projektSucheButtonExist().equals("SUCHE")) {
+		if (projektFindenEingabeFelderExist(logger).equals("Projekte finden")
+				&& projektSucheButtonExist(logger).equals("SUCHE")) {
 
 			System.out.println("Eingabefelder: Projekt finden und Suche Button existiert");
 
 		} else {
 			System.out.println("Eingabefelder: Projekt finden und Suche Button existiert nicht");
+			logger.log(Status.FAIL, "Eingabefelder: Projekt finden und Suche Button existiert nicht");
 		}
 
 	}

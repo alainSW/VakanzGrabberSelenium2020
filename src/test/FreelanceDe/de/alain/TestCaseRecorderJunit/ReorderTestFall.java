@@ -12,6 +12,9 @@ import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
 import de.alain.CreateExcelFile.ExportProjektInformationenToExcel;
 import de.alain.CreateExcelFile.ImportAnmeldeDatenVonExcelToJava;
 import de.alain.PageAndHTMLControl.CookiesHandling;
@@ -45,6 +48,9 @@ public class ReorderTestFall {
 	ImportAnmeldeDatenVonExcelToJava importAnmeldeDatenVonExcelToJava;
 	StackTraceElement[] stackTrace;
 
+	public ExtentReports extent;
+	public ExtentTest logger;
+
 	@Before
 	public void setUp() throws Exception {
 		if (driver == null) {
@@ -77,24 +83,26 @@ public class ReorderTestFall {
 		Thread.sleep(3000);
 
 		// Cookies Handling
-		cookiesHandling.IscookiesButtonExistAcceptButtonDrücken();
+		cookiesHandling.IscookiesButtonExistAcceptButtonDrücken(logger);
 
 		// Aktion: Login
-		login.isLoginButtonExist(); // Es wird geprüft, ob man bereit eingeloggt? Wenn Ja, dann wird man ausgeloggt.
-		login.loginButtonDruecken();
-		login.isLoginMaskeExist(); // Es wird geprüft, ob die Maske-Login existiert
-		login.typeMail(ImportAnmeldeDatenVonExcelToJava.getAnmeldeDatenToExcel()[0]); // User-Name//E-Mail eingeben
-		login.typePasswort(ImportAnmeldeDatenVonExcelToJava.getAnmeldeDatenToExcel()[1]);// Passwort eingeben
-		login.anmelden(); // Anmeldebutton drücken
+		login.isLoginButtonExist(logger); // Es wird geprüft, ob man bereit eingeloggt? Wenn Ja, dann wird man
+											// ausgeloggt.
+		login.loginButtonDruecken(logger);
+		login.isLoginMaskeExist(logger); // Es wird geprüft, ob die Maske-Login existiert
+		login.typeMail(ImportAnmeldeDatenVonExcelToJava.getAnmeldeDatenToExcel()[0], logger); // User-Name//E-Mail
+																								// eingeben
+		login.typePasswort(ImportAnmeldeDatenVonExcelToJava.getAnmeldeDatenToExcel()[1], logger);// Passwort eingeben
+		login.anmelden(logger); // Anmeldebutton drücken
 
 		// Es wird geprüft, ob man korrekt eingeloggt ist?
 		assertTrue(login.isEmailVisible());
 
 		// Freelance.de Maske: Projekt finden
-		projektsuche.isProjektFindenEingabenfelderExistAndprojektSucheButtonExist();
+		projektsuche.isProjektFindenEingabenfelderExistAndprojektSucheButtonExist(logger);
 		projektsuche.clickFreelanceDe();
-		projektsuche.typeProjekt("msg");// leiter // Testautomatisierer
-		projektsuche.clickSuche();
+		projektsuche.typeProjekt("msg", logger);// leiter // Testautomatisierer
+		projektsuche.clickSuche(logger);
 
 		// Maske navigieren und Projektinformationen aussortieren
 		ProjektMaskeNavigationUndProjektMerkmaleHolen.ProjektmaskeAnklickeUndMaskeInformationenAssortieren(projektsuche,
@@ -119,24 +127,26 @@ public class ReorderTestFall {
 		Thread.sleep(3000);
 
 		// Cookies Handling
-		cookiesHandling.IscookiesButtonExistAcceptButtonDrücken();
+		cookiesHandling.IscookiesButtonExistAcceptButtonDrücken(logger);
 
 		// Aktion: Login
-		login.isLoginButtonExist(); // Es wird geprüft, ob man bereit eingeloggt? Wenn Ja, dann wird man ausgeloggt.
-		login.loginButtonDruecken();
-		login.isLoginMaskeExist(); // Es wird geprüft, ob die Maske-Login existiert
-		login.typeMail(ImportAnmeldeDatenVonExcelToJava.getAnmeldeDatenToExcel()[0]); // User-Name//E-Mail eingeben
-		login.typePasswort(ImportAnmeldeDatenVonExcelToJava.getAnmeldeDatenToExcel()[1]);// Passwort eingeben
-		login.anmelden(); // Anmeldebutton drücken
+		login.isLoginButtonExist(logger); // Es wird geprüft, ob man bereit eingeloggt? Wenn Ja, dann wird man
+											// ausgeloggt.
+		login.loginButtonDruecken(logger);
+		login.isLoginMaskeExist(logger); // Es wird geprüft, ob die Maske-Login existiert
+		login.typeMail(ImportAnmeldeDatenVonExcelToJava.getAnmeldeDatenToExcel()[0], logger); // User-Name//E-Mail
+																								// eingeben
+		login.typePasswort(ImportAnmeldeDatenVonExcelToJava.getAnmeldeDatenToExcel()[1], logger);// Passwort eingeben
+		login.anmelden(logger); // Anmeldebutton drücken
 
 		// Es wird geprüft, ob man korrekt eingeloggt ist?
 		assertTrue(login.isEmailVisible());
 
 		// Freelance.de Maske: Projekt finden
-		projektsuche.isProjektFindenEingabenfelderExistAndprojektSucheButtonExist();
+		projektsuche.isProjektFindenEingabenfelderExistAndprojektSucheButtonExist(logger);
 		projektsuche.clickFreelanceDe();
-		projektsuche.typeProjekt("Testautomatisierer");// leiter // Testautomatisierer
-		projektsuche.clickSuche();
+		projektsuche.typeProjekt("Testautomatisierer", logger);// leiter // Testautomatisierer
+		projektsuche.clickSuche(logger);
 
 		// Maske navigieren und Projektinformationen aussortieren
 		ProjektMaskeNavigationUndProjektMerkmaleHolen.ProjektmaskeAnklickeUndMaskeInformationenAssortieren(projektsuche,

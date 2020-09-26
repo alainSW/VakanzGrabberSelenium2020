@@ -31,6 +31,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
 import de.alain.BaseClass.Base;
 
 public class Login extends Base {
@@ -71,37 +74,44 @@ public class Login extends Base {
 	}
 
 	// Email-Adresse eingeben
-	public void typeMail(String inputText) {
+	public void typeMail(String inputText, ExtentTest logger) {
 
 		if (!getLoginText().equals("Login")) {
 			System.out.println("typeMail Not Exist");
+			logger.log(Status.FATAL,
+					"Der Login-Maske wird nicht angezeigt, deshalb kann es kein Email angegeben werden");
 			return;
 		} else {
+			logger.log(Status.INFO,
+					"Es wird die Email-Adresse " + inputText + " im Eingabefeld <Nutzername/E-Mail> eingeben");
 			type(email, 10, inputText);
 		}
 
 	}
 
 	// EmailEingabeFelder Existenz prüfen
-	public String EmailEingabeFelderExistenzPrüfen() {
-		// System.out.println(selectgetText(emailEingabeFelderExist, 10));
+	public String EmailEingabeFelderExistenzPrüfen(ExtentTest logger) {
+		logger.log(Status.INFO, "Es wird geprueft, ob das Eingabefeld: <Nutzername/E-Mail> existiert.");
 		return selectgetText(emailEingabeFelderExist, 10);
 	}
 
 	// Passwort eingeben
-	public void typePasswort(String inputText) {
+	public void typePasswort(String inputText, ExtentTest logger) {
 		if (!getLoginText().equals("Login")) {
 			System.out.println("typePasswort Not Exist");
+			logger.log(Status.FATAL,
+					"Der Login-Maske wird nicht angezeigt, deshalb kann es kein Passwort angegeben werden");
 			return;
 		} else {
+			logger.log(Status.INFO, "Es wird das Passwort XXXX im Eingabefeld <Passwort> eingeben");
 			type(passwort, 10, inputText);
 		}
 
 	}
 
 	// PasswortEingabeFelder Existenz prüfen
-	public String PasswortEingabeFelderExistenzPrüfen() {
-		// System.out.println(selectgetText(passwortEingabeFelderExist, 10));
+	public String PasswortEingabeFelderExistenzPrüfen(ExtentTest logger) {
+		logger.log(Status.INFO, "Es wird geprueft, ob das Eingabefeld: <Passwort> existiert.");
 		return selectgetText(passwortEingabeFelderExist, 10);
 	}
 
@@ -111,39 +121,47 @@ public class Login extends Base {
 			System.out.println("eingeloggt Bleiben Checkbox Not Exist");
 			return;
 		} else {
+
 			click(eingeloggenBleiben, 10);
 		}
 
 	}
 
 	// eingeloggt bleiben Checkbox Existenz prüfen
-	public String EingeloggenBleibenCheckboxExistenzPrüfen() {
-		// System.out.println(selectgetText(eingeloggenBleibenCheckboxExist, 10));
+	public String EingeloggenBleibenCheckboxExistenzPrüfen(ExtentTest logger) {
+		logger.log(Status.INFO, "Es wird geprueft, ob das Checkbox: <Eingeloggt bleiben> existiert.");
 		return selectgetText(eingeloggenBleibenCheckboxExist, 10);
 	}
 
 	// Anmeldebutton drücken
-	public void anmelden() {
+	public void anmelden(ExtentTest logger) {
 
 		if (!getLoginText().equals("Login")) {
+			logger.log(Status.FATAL,
+					"Der Login-Maske wird nicht angezeigt, deshalb kann der Anmelde-Button nicht gedrueckt werden");
 			return;
 		} else {
+			logger.log(Status.INFO, "Der Anmeldebutton wird angedrueckt.");
 			click(anmelden, 10);
 		}
 
 	}
 
 	// AnmeldeButton Existenz prüfen
-	public String AnmeldeButtonExistenzPrüfen() {
-		// System.out.println(selectgetAttributByValue(anmeldeButtonExist, 10));
+	public String AnmeldeButtonExistenzPrüfen(ExtentTest logger) {
+		logger.log(Status.INFO, "Es wird geprueft, ob der Checkbox: <Anmelde> existiert.");
 		return selectgetAttributByValue(anmeldeButtonExist, 10);
 	}
 
 	// Login-Button drücken
-	public void loginButtonDruecken() {
+	public void loginButtonDruecken(ExtentTest logger) {
+
+		logger.log(Status.INFO, "Es wird geprueft, ob der Login-Button exitiert");
 		if (!getLoginText().equals("Login")) {
+			logger.log(Status.FAIL, "Login-Button existiert nicht, deshalb kann es nicht gedrueckt werden");
 			return;
 		} else {
+			logger.log(Status.INFO, "Login-Button wird gedrueckt");
 			click(loginButton, 10);
 		}
 
@@ -171,33 +189,36 @@ public class Login extends Base {
 	}
 
 	// Ist man eingeloggt? Wenn Ja dann wird man ausgeloggt
-	public void isLoginButtonExist() {
+	public void isLoginButtonExist(ExtentTest logger) {
 		new WebDriverWait(driver, 3);
-
+		logger.log(Status.INFO, "Es wird geprueft, ob der Login-Button exitiert");
 		if (getLoginText().equals("Login")) {
 			System.out.println("Login Exist!");
+			logger.log(Status.PASS, "Der Login-Button exitiert");
 			// logoutButton();
 			return;
 		} else {
 			System.out.println("Kein Login Exist!");
+			logger.log(Status.FAIL, "Der Login-Button exitiert nicht");
 			return;
 		}
 	}
 
 	// Es wird geprüft, ob die Maske Login geladen ist?
-	public void isLoginMaskeExist() {
+	public void isLoginMaskeExist(ExtentTest logger) {
 		new WebDriverWait(driver, 3);
 
-		if (EmailEingabeFelderExistenzPrüfen().equals("NUTZERNAME/E-MAIL")
-				&& PasswortEingabeFelderExistenzPrüfen().equals("PASSWORT")
-				&& EingeloggenBleibenCheckboxExistenzPrüfen().equals("Eingeloggt bleiben")
-				&& AnmeldeButtonExistenzPrüfen().equals("Anmelden »")) {
+		if (EmailEingabeFelderExistenzPrüfen(logger).equals("NUTZERNAME/E-MAIL")
+				&& PasswortEingabeFelderExistenzPrüfen(logger).equals("PASSWORT")
+				&& EingeloggenBleibenCheckboxExistenzPrüfen(logger).equals("Eingeloggt bleiben")
+				&& AnmeldeButtonExistenzPrüfen(logger).equals("Anmelden »")) {
 
 			System.out.println("Login Maske existiert nicht!");
 
 		} else {
 
 			System.out.println("Login Maske existiert!");
+			logger.log(Status.FAIL, "Loginmaske nicht existiert!");
 
 		}
 
