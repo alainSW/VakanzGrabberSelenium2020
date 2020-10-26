@@ -3,8 +3,6 @@ package de.alain.CreateExcelFile;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
@@ -16,7 +14,7 @@ import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 
 import de.alain.ProjektStatitikUndInformationen.ProjektInformationen;
-import de.alain.ProjektmaskeNavigierenUndProjektmerkmaleHolen.ProjektMaskeNavigationUndProjektMerkmaleHolen;
+import de.alain.ProjektmaskeNavigationUndProjektmerkmaleHolen.ProjektMaskeNavigationUndProjektMerkmaleHolen;
 
 public class ExportProjektInformationenToExcel {
 
@@ -30,9 +28,9 @@ public class ExportProjektInformationenToExcel {
 		return style;
 	}
 
-	public static String TextMethodeName(String MethodeName, String FileName, String getTitleURL) {
+	public static String TextMethodeName(String MethodeName, String FileName) {
 
-		return variable = MethodeName + " " + FileName + " " + getTitleURL;
+		return variable = MethodeName + " " + FileName;
 
 	}
 
@@ -67,7 +65,7 @@ public class ExportProjektInformationenToExcel {
 		cell = row.createCell(3, CellType.STRING);
 		cell.setCellValue("VorraussichtlichesEnde");
 		cell.setCellStyle(style);
-		// projektOrt
+		// projektOr
 		cell = row.createCell(4, CellType.STRING);
 		cell.setCellValue("ProjektOrt");
 		cell.setCellStyle(style);
@@ -97,8 +95,8 @@ public class ExportProjektInformationenToExcel {
 		for (ProjektInformationen pr : list) {
 			rownum++;
 			row = sheet.createRow(rownum);
-			// System.out.println(rownum);
-			// System.out.println(pr);
+			System.out.println(rownum);
+			System.out.println(pr);
 			// ProjektNum (A)
 			cell = row.createCell(0, CellType.NUMERIC);
 			cell.setCellValue(rownum);
@@ -133,42 +131,23 @@ public class ExportProjektInformationenToExcel {
 			cell.setCellValue(pr.getProjektbeschreibung());
 
 		}
-
-		//
-		File file = new File("D:\\_SeliniumVakanzGrabber\\Neuer Ordner\\" + variable.split(" ")[2] + "_Projekt_"
-				+ variable.split(" ")[1] + " " + CurrentDateTime() + ".xls");
-
+		File file = new File("D:\\_SeliniumVakanzGrabber\\Neuer Ordner\\" + variable.split(" ")[1]);
 		file.getParentFile().mkdirs();
 
-		if (file.createNewFile()) {
-
-			FileOutputStream outFile = new FileOutputStream(file);
-			workbook.write(outFile);
-			System.out.println("Created file: " + file.getAbsolutePath());
-			workbook.close();
-
-		} else {
+		if (file.exists()) {
 
 			System.out.println("Achtung Datei existiert bereit");
 			file.delete();
 
 			System.out.println("Die Datei wurde erfolgreich gelöscht.");
+
 			FileOutputStream outFile = new FileOutputStream(file);
 			workbook.write(outFile);
 			System.out.println("Created file: " + file.getAbsolutePath());
 			workbook.close();
+
 		}
 
 	}
 
-	public static String CurrentDateTime() {
-
-		SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
-
-		Date date = new Date();
-
-		System.out.println(formatter.format(date));
-		return formatter.format(date).toString();
-
-	}
 }

@@ -11,7 +11,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -29,10 +28,8 @@ import de.alain.PageAndHTMLControl.Projektsuche;
 import de.alain.ProjektStatitikUndInformationen.ProjektStatistik;
 import de.alain.ProjektmaskeNavigierenUndProjektmerkmaleHolen.ProjektMaskeNavigationUndProjektMerkmaleHolen;
 import de.alain.Screenshot.Utility;
-import de.alain.Sqlite.SQLITEJDBC;
 
-@Listeners({ de.alain.LoggerHandling.listenerTesting.class })
-public class TestParallelClassOne {
+public class TestParallelClassTwo {
 	private WebDriver driver;
 	public String pricejeansBlues;
 
@@ -51,8 +48,6 @@ public class TestParallelClassOne {
 	ProjektMaskeNavigationUndProjektMerkmaleHolen projektMaskeNavigationUndProjektMerkmaleHolen;
 
 	ImportAnmeldeDatenVonExcelToJava importAnmeldeDatenVonExcelToJava;
-	
-
 	StackTraceElement[] stackTrace;
 	public String dataProviderParameter = "";
 
@@ -64,34 +59,26 @@ public class TestParallelClassOne {
 
 	public ExtentReports extent;
 	public ExtentTest logger;
-	
-	
-	// Sqlite 26.10.2020
-	
-	SQLITEJDBC sqlitejdbc;
 
 	@BeforeTest
 	public void setup() {
 		System.out.println("login to google");
 
-		ExtentHtmlReporter reporter = new ExtentHtmlReporter("./Reports/learn_automation1.html");
+		ExtentHtmlReporter reporter = new ExtentHtmlReporter("./Reports/learn_automation2.html");
 		extent = new ExtentReports();
 		extent.attachReporter(reporter);
 		extent.setSystemInfo("Host Name", "LocaHost");
 		extent.setSystemInfo("Environment", "QA");
 		extent.setSystemInfo("User Name", "Testautomatisierer");
-		
-		sqlitejdbc.SQLITEJDBCConnectToDatabase();
 
 	}
 
 	@BeforeMethod
-	public void beforeMethod() throws InterruptedException, IOException {
+	public void beforeMethod() throws InterruptedException {
 		if (driver == null) {
 
 			System.setProperty("webdriver.firefox.driver",
 					System.getProperty("user.dir") + "\\src\\test\\resources\\Executeable\\geckodriver.exe");
-
 			driver = new FirefoxDriver();
 
 			/*
@@ -116,14 +103,14 @@ public class TestParallelClassOne {
 	@DataProvider(name = "data-provider")
 	public Object[][] dataProviderMethod() throws IOException {
 		Webseite = ImportAnmeldeDatenVonExcelToJava.getProjektsuchbegriffToExcel()[0];
-		FirstElementDataProvider = ImportAnmeldeDatenVonExcelToJava.getProjektsuchbegriffToExcel()[1];
-		LastElementDataProvider = ImportAnmeldeDatenVonExcelToJava.getProjektsuchbegriffToExcel()[2];
+		FirstElementDataProvider = ImportAnmeldeDatenVonExcelToJava.getProjektsuchbegriffToExcel()[3];
+		LastElementDataProvider = ImportAnmeldeDatenVonExcelToJava.getProjektsuchbegriffToExcel()[4];
 
 		return new Object[][] { { FirstElementDataProvider }, { LastElementDataProvider } };
 	}
 
 	@Test(dataProvider = "data-provider")
-	public void test_1(String data) throws InterruptedException, IOException {
+	public void test_2(String data) throws InterruptedException, IOException {
 
 		stackTrace = new Throwable().getStackTrace();
 
@@ -139,9 +126,9 @@ public class TestParallelClassOne {
 			Thread.sleep(3000);
 
 			// Cookies Handling
-			logger.log(Status.INFO, "Cookies bestaetigen : ");
+			logger.log(Status.INFO, "Cookies bestaetgen : ");
 			cookiesHandling.IscookiesButtonExistAcceptButtonDrücken(logger);
-			logger.log(Status.PASS, "Cookies ist erfolgreich betaetigt worden. ");
+			logger.log(Status.PASS, "Cookies ist erfolgreich betaetigt. ");
 
 			// Aktion: Login
 			logger.log(Status.INFO, "Login-Button: Existenz pruefen ");
@@ -158,11 +145,11 @@ public class TestParallelClassOne {
 
 			logger.log(Status.INFO, "Anmeldename eingeben ");
 			login.typeMail(ImportAnmeldeDatenVonExcelToJava.getAnmeldeDatenToExcel()[0], logger); // User-Name//E-Mail
-																									// // eingeben
+																									// eingeben
 			logger.log(Status.PASS, "Anmeldename ist erfolgreich eingegeben.");
 
 			logger.log(Status.INFO, "Passwort eingeben ");
-			login.typePasswort(ImportAnmeldeDatenVonExcelToJava.getAnmeldeDatenToExcel()[1], logger);// Passwort //
+			login.typePasswort(ImportAnmeldeDatenVonExcelToJava.getAnmeldeDatenToExcel()[1], logger);// Passwort
 																										// eingeben
 			logger.log(Status.PASS, "Passwort ist erfolgreich eingegeben worden.");
 
@@ -207,7 +194,8 @@ public class TestParallelClassOne {
 
 		logger.log(Status.INFO, "Projektsergebnisse in Excel exportiert");
 		ExportProjektInformationenToExcel.Excel();
-		logger.log(Status.PASS, "Export der Daten ist erfolgreich gewesen");
+		logger.log(Status.PASS, "Export der Daten erfolgreich");
+
 	}
 
 	@AfterMethod

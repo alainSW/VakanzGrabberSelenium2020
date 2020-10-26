@@ -51,7 +51,6 @@ public class TestParallelClassOne {
 	ProjektMaskeNavigationUndProjektMerkmaleHolen projektMaskeNavigationUndProjektMerkmaleHolen;
 
 	ImportAnmeldeDatenVonExcelToJava importAnmeldeDatenVonExcelToJava;
-	
 
 	StackTraceElement[] stackTrace;
 	public String dataProviderParameter = "";
@@ -64,10 +63,9 @@ public class TestParallelClassOne {
 
 	public ExtentReports extent;
 	public ExtentTest logger;
-	
-	
+
 	// Sqlite 26.10.2020
-	
+
 	SQLITEJDBC sqlitejdbc;
 
 	@BeforeTest
@@ -80,8 +78,8 @@ public class TestParallelClassOne {
 		extent.setSystemInfo("Host Name", "LocaHost");
 		extent.setSystemInfo("Environment", "QA");
 		extent.setSystemInfo("User Name", "Testautomatisierer");
-		
-		sqlitejdbc.SQLITEJDBCConnectToDatabase();
+
+		// sqlitejdbc.SQLITEJDBCConnectToDatabase();
 
 	}
 

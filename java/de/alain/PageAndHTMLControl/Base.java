@@ -1,4 +1,6 @@
-package de.alain.BaseClass;
+package de.alain.PageAndHTMLControl;
+
+import static org.junit.Assert.fail;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -25,7 +27,7 @@ public class Base {
 			driver.get(url);
 		} catch (WebDriverException wde) {
 			System.out.println(wde);
-
+			fail();
 		}
 	}
 
@@ -35,7 +37,7 @@ public class Base {
 			new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(element)).click();
 		} catch (WebDriverException wde) {
 			System.out.println(wde);
-
+			fail();
 		}
 	}
 
@@ -47,7 +49,7 @@ public class Base {
 			element.sendKeys(inputText);
 		} catch (WebDriverException wde) {
 			System.out.println(wde);
-
+			fail();
 		}
 	}
 
@@ -58,7 +60,7 @@ public class Base {
 
 		} catch (WebDriverException wde) {
 			System.out.println(wde);
-
+			fail();
 		}
 	}
 
@@ -73,8 +75,6 @@ public class Base {
 		} catch (WebDriverException wde) {
 			return "kein Text";
 		}
-
-		System.out.println(text);
 		return text;
 	}
 
@@ -88,7 +88,7 @@ public class Base {
 		} catch (WebDriverException wde) {
 			return "kein Text";
 		}
-		System.out.println(text);
+		// System.out.println(text);
 		return text;
 	}
 
@@ -102,7 +102,7 @@ public class Base {
 		} catch (WebDriverException wde) {
 			return "kein Text";
 		}
-		System.out.println(text);
+		// System.out.println(text);
 		return text;
 	}
 
@@ -116,36 +116,28 @@ public class Base {
 		} catch (WebDriverException wde) {
 			return "kein Text";
 		}
-		System.out.println(text);
+		// System.out.println(text);
 		return text;
 	}
 
-	public static String selectgetAttributByClass(WebElement element, int timeout) {
-		// Feldinhalt entnehmen
-		String text = "";
+	public String selectgetAttributById(String projektListenMitAttribut, int timeout) {
+
+		String attributwerte1 = "";
+		String attributwerte2 = "";
 		try {
-			text = new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(element))
-					.getAttribute("class");
+			java.util.List<WebElement> text = driver.findElements(By.xpath(projektListenMitAttribut));
+			int i = 0;
+
+			for (WebElement Id : text) {
+				attributwerte2 = attributwerte2 + "\n" + Id.getAttribute("id");
+				i++;
+			}
+			attributwerte1 = attributwerte2;
 
 		} catch (WebDriverException wde) {
-			return "kein Text";
+			return "kein Id";
 		}
-		System.out.println(text);
-		return text;
-	}
-
-	public static String selectgetAttributById(WebElement element, int timeout) {
-		// Feldinhalt entnehmen
-		String text = "";
-		try {
-			text = new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(element))
-					.getAttribute("id");
-
-		} catch (WebDriverException wde) {
-			return "kein Text";
-		}
-		System.out.println(text);
-		return text;
+		return attributwerte1;
 	}
 
 	public static String selectgetAttributByDataOriginalTitle(By projektListenMitAttribut, int timeout) {
@@ -177,7 +169,7 @@ public class Base {
 
 		} catch (WebDriverException wde) {
 			System.out.println(wde);
-
+			fail();
 		}
 	}
 
@@ -186,6 +178,7 @@ public class Base {
 			new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(element));
 
 		} catch (WebDriverException wde) {
+			fail();
 
 			return false;
 		}
