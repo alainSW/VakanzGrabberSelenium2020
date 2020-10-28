@@ -28,6 +28,7 @@ import de.alain.PageAndHTMLControl.Projektsuche;
 import de.alain.ProjektStatitikUndInformationen.ProjektStatistik;
 import de.alain.ProjektmaskeNavigierenUndProjektmerkmaleHolen.ProjektMaskeNavigationUndProjektMerkmaleHolen;
 import de.alain.Screenshot.Utility;
+import de.alain.Sqlite.SQLITEJDBC;
 
 public class TestParallelClassTwo {
 	private WebDriver driver;
@@ -59,6 +60,9 @@ public class TestParallelClassTwo {
 
 	public ExtentReports extent;
 	public ExtentTest logger;
+
+	// Sqlite 26.10.2020
+	private SQLITEJDBC sqlite;
 
 	@BeforeTest
 	public void setup() {
@@ -94,6 +98,13 @@ public class TestParallelClassTwo {
 			projektsuche = new Projektsuche(driver);
 			projektmerkmale = new Projektmerkmale(driver);
 			cookiesHandling = new CookiesHandling(driver);
+
+			// SQLITE-Datenbank Klasse instanzieren
+			sqlite = new SQLITEJDBC();
+			// vVerbindung zum Datanbank erstellen
+			sqlite.SQLITEJDBCConnectToDatabase();
+			// Tabelle erstellen
+			sqlite.SQLITEJDBCCreateTable();
 
 			driver.manage().window().maximize();
 
@@ -214,6 +225,9 @@ public class TestParallelClassTwo {
 
 	@AfterTest
 	public void EndTest() {
+
+		// Query Select betätigen und Ergebnisse zeigen
+		sqlite.SQLITEJDBCSelect();
 		extent.flush();
 
 	}

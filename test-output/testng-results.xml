@@ -17,20 +17,20 @@
       <![CDATA[Test passed test_1]]>
     </line>
   </reporter-output>
-  <suite started-at="2020-10-26T14:10:53 CET" name="Default suite" finished-at="2020-10-26T14:11:55 CET" duration-ms="62363">
+  <suite started-at="2020-10-28T09:50:24 CET" name="Default suite" finished-at="2020-10-28T09:51:09 CET" duration-ms="45281">
     <groups>
     </groups>
-    <test started-at="2020-10-26T14:10:53 CET" name="Default test" finished-at="2020-10-26T14:11:55 CET" duration-ms="62363">
+    <test started-at="2020-10-28T09:50:24 CET" name="Default test" finished-at="2020-10-28T09:51:09 CET" duration-ms="45281">
       <class name="de.alain.TestNGParallel.TestParallelClassOne">
-        <test-method is-config="true" signature="setup()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@66f57048]" started-at="2020-10-26T14:10:53 CET" name="setup" finished-at="2020-10-26T14:10:53 CET" duration-ms="147" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@4fb61f4a]" started-at="2020-10-28T09:50:24 CET" name="setup" finished-at="2020-10-28T09:50:24 CET" duration-ms="180" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@66f57048]" started-at="2020-10-26T14:10:53 CET" name="beforeMethod" finished-at="2020-10-26T14:10:57 CET" duration-ms="4356" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@4fb61f4a]" started-at="2020-10-28T09:50:24 CET" name="beforeMethod" finished-at="2020-10-28T09:50:29 CET" duration-ms="5117" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@66f57048]" started-at="2020-10-26T14:10:57 CET" name="test_1" data-provider="data-provider" finished-at="2020-10-26T14:11:46 CET" duration-ms="48343" status="PASS">
+        <test-method signature="test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@4fb61f4a]" started-at="2020-10-28T09:50:29 CET" name="test_1" data-provider="data-provider" finished-at="2020-10-28T09:51:00 CET" duration-ms="30312" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -47,18 +47,18 @@
             </line>
           </reporter-output>
         </test-method> <!-- test_1 -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@66f57048]" started-at="2020-10-26T14:11:46 CET" name="afterMethod" finished-at="2020-10-26T14:11:46 CET" duration-ms="105" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@4fb61f4a]" started-at="2020-10-28T09:51:00 CET" name="afterMethod" finished-at="2020-10-28T09:51:00 CET" duration-ms="105" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test_1 status=SUCCESS method=TestParallelClassOne.test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@66f57048] output=Starting test is test_1]]]>
+                <![CDATA[[TestResult name=test_1 status=SUCCESS method=TestParallelClassOne.test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@4fb61f4a] output=Starting test is test_1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@66f57048]" started-at="2020-10-26T14:11:46 CET" name="test_1" data-provider="data-provider" finished-at="2020-10-26T14:11:51 CET" duration-ms="5129" status="PASS">
+        <test-method signature="test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@4fb61f4a]" started-at="2020-10-28T09:51:00 CET" name="test_1" data-provider="data-provider" finished-at="2020-10-28T09:51:04 CET" duration-ms="4571" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -75,22 +75,22 @@
             </line>
           </reporter-output>
         </test-method> <!-- test_1 -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@66f57048]" started-at="2020-10-26T14:11:46 CET" name="beforeMethod" finished-at="2020-10-26T14:11:46 CET" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@4fb61f4a]" started-at="2020-10-28T09:51:00 CET" name="beforeMethod" finished-at="2020-10-28T09:51:00 CET" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@66f57048]" started-at="2020-10-26T14:11:51 CET" name="afterMethod" finished-at="2020-10-26T14:11:55 CET" duration-ms="3864" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@4fb61f4a]" started-at="2020-10-28T09:51:04 CET" name="afterMethod" finished-at="2020-10-28T09:51:08 CET" duration-ms="3850" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test_1 status=SUCCESS method=TestParallelClassOne.test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@66f57048] output=Starting test is test_1]]]>
+                <![CDATA[[TestResult name=test_1 status=SUCCESS method=TestParallelClassOne.test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@4fb61f4a] output=Starting test is test_1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="EndTest()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@66f57048]" started-at="2020-10-26T14:11:55 CET" name="EndTest" finished-at="2020-10-26T14:11:55 CET" duration-ms="212" status="PASS">
+        <test-method is-config="true" signature="EndTest()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@4fb61f4a]" started-at="2020-10-28T09:51:08 CET" name="EndTest" finished-at="2020-10-28T09:51:09 CET" duration-ms="551" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EndTest -->

@@ -65,8 +65,7 @@ public class TestParallelClassOne {
 	public ExtentTest logger;
 
 	// Sqlite 26.10.2020
-
-	SQLITEJDBC sqlitejdbc;
+	private SQLITEJDBC sqlite;
 
 	@BeforeTest
 	public void setup() {
@@ -78,8 +77,6 @@ public class TestParallelClassOne {
 		extent.setSystemInfo("Host Name", "LocaHost");
 		extent.setSystemInfo("Environment", "QA");
 		extent.setSystemInfo("User Name", "Testautomatisierer");
-
-		// sqlitejdbc.SQLITEJDBCConnectToDatabase();
 
 	}
 
@@ -105,6 +102,13 @@ public class TestParallelClassOne {
 			projektsuche = new Projektsuche(driver);
 			projektmerkmale = new Projektmerkmale(driver);
 			cookiesHandling = new CookiesHandling(driver);
+
+			// SQLITE-Datenbank Klasse instanzieren
+			sqlite = new SQLITEJDBC();
+			// vVerbindung zum Datanbank erstellen
+			sqlite.SQLITEJDBCConnectToDatabase();
+			// Tabelle erstellen
+			sqlite.SQLITEJDBCCreateTable();
 
 			driver.manage().window().maximize();
 
@@ -204,7 +208,7 @@ public class TestParallelClassOne {
 				driver.getCurrentUrl().split("https://www.")[1].split("/")[0].toString());
 
 		logger.log(Status.INFO, "Projektsergebnisse in Excel exportiert");
-		ExportProjektInformationenToExcel.Excel();
+		ExportProjektInformationenToExcel.Excel(); // Das Insert der Daten in der SQLITE passiert in diesem Klasse
 		logger.log(Status.PASS, "Export der Daten ist erfolgreich gewesen");
 	}
 
@@ -224,6 +228,8 @@ public class TestParallelClassOne {
 
 	@AfterTest
 	public void EndTest() {
+		// Query Select betätigen und Ergebnisse zeigen
+		sqlite.SQLITEJDBCSelect();
 		extent.flush();
 
 	}

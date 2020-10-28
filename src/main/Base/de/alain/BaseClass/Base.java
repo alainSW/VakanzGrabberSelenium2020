@@ -74,7 +74,7 @@ public class Base {
 			return "kein Text";
 		}
 
-		System.out.println(text);
+		// System.out.println(text);
 		return text;
 	}
 
@@ -88,7 +88,7 @@ public class Base {
 		} catch (WebDriverException wde) {
 			return "kein Text";
 		}
-		System.out.println(text);
+		// System.out.println(text);
 		return text;
 	}
 
@@ -102,7 +102,7 @@ public class Base {
 		} catch (WebDriverException wde) {
 			return "kein Text";
 		}
-		System.out.println(text);
+		// System.out.println(text);
 		return text;
 	}
 
@@ -116,7 +116,7 @@ public class Base {
 		} catch (WebDriverException wde) {
 			return "kein Text";
 		}
-		System.out.println(text);
+		// System.out.println(text);
 		return text;
 	}
 
@@ -130,7 +130,7 @@ public class Base {
 		} catch (WebDriverException wde) {
 			return "kein Text";
 		}
-		System.out.println(text);
+		// System.out.println(text);
 		return text;
 	}
 
@@ -144,7 +144,7 @@ public class Base {
 		} catch (WebDriverException wde) {
 			return "kein Text";
 		}
-		System.out.println(text);
+		// System.out.println(text);
 		return text;
 	}
 

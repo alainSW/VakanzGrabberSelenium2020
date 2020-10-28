@@ -17,10 +17,13 @@ import org.apache.poi.ss.usermodel.Row;
 
 import de.alain.ProjektStatitikUndInformationen.ProjektInformationen;
 import de.alain.ProjektmaskeNavigierenUndProjektmerkmaleHolen.ProjektMaskeNavigationUndProjektMerkmaleHolen;
+import de.alain.Sqlite.SQLITEJDBC;
 
 public class ExportProjektInformationenToExcel {
 
 	private static String variable;
+
+	private static SQLITEJDBC dd = new SQLITEJDBC();
 
 	private static HSSFCellStyle createStyleForTitle(HSSFWorkbook workbook) {
 		HSSFFont font = workbook.createFont();
@@ -95,7 +98,12 @@ public class ExportProjektInformationenToExcel {
 
 		// Data
 		for (ProjektInformationen pr : list) {
+
 			rownum++;
+
+			// Insert die Daten in SQLITE
+			dd.SQLITEJDBCInsertData(pr, rownum, variable.split(" ")[1], variable.split(" ")[2], CurrentDateTime());
+
 			row = sheet.createRow(rownum);
 			// System.out.println(rownum);
 			// System.out.println(pr);
