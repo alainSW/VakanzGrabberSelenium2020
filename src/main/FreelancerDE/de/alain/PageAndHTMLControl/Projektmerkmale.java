@@ -76,31 +76,31 @@ public class Projektmerkmale extends Base {
 	private static WebElement projektbeschreibung;
 
 	// originalTitle_ Geplanter Start
-	@FindBy(xpath = "//div[@class='project-right-content']//div[1]//i[@class='fa fa-sign-in']")
+	@FindBy(xpath = "//div[@class='project-right-content']//div[1]//i[@class='far fa-calendar-star']")
 	private static WebElement OriginalTitle_GeplanterStart;
 
 	// originalTitle_ VoraussichtlichesEnde
-	@FindBy(xpath = "//div[@class='project-right-content']//div[1]//i[@class='fa fa-sign-out']")
+	@FindBy(xpath = "//div[@class='project-right-content']//div[1]//i[@class='far fa-calendar-times']")
 	private static WebElement OriginalTitle_VoraussichtlichesEnde;
 
 	// originalTitle_ ProjektOrt
-	@FindBy(xpath = "//div[@class='project-right-content']//div[1]//i[@class='fa fa-globe']")
+	@FindBy(xpath = "//div[@class='project-right-content']//div[1]//i[@class='far fa-map-marker-alt']")
 	private static WebElement OriginalTitle_ProjektOrt;
 
 	// originalTitle_ StundenSatz
-	@FindBy(xpath = "//div[@class='project-right-content']//div[2]//i[@class='fa fa-money']")
+	@FindBy(xpath = "//div[@class='project-right-content']//div[2]//i[@class='far fa-coins']")
 	private static WebElement OriginalTitle_StundenSatz;
 
 	// originalTitle_ LetzteUpdate
-	@FindBy(xpath = "//div[@class='project-right-content']//div[2]//i[@class='fa fa-refresh']")
+	@FindBy(xpath = "//div[@class='project-right-content']//div[2]//i[@class='far fa-history']")
 	private static WebElement OriginalTitle_LetzteUpdate;
 
 	// originalTitle_ Remote
-	@FindBy(xpath = "//div[@class='project-right-content']//div[2]//i[@class='fa fa-home']")
+	@FindBy(xpath = "//div[@class='project-right-content']//div[2]//i[@class='far fa-home-alt']")
 	private static WebElement OriginalTitle_Remote;
 
 	// originalTitle_ RefenrenzNummer
-	@FindBy(xpath = "//div[@class='project-right-content']//div[2]//i[@class='fa fa-tag']")
+	@FindBy(xpath = "//div[@class='project-right-content']//div[2]//i[@class='far fa-tag']")
 	private static WebElement OriginalTitle_RefenrenzNummer;
 
 	public Projektmerkmale(WebDriver driver) {
