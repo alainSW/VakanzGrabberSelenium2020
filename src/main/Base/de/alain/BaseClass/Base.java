@@ -164,7 +164,7 @@ public class Base {
 			System.out.println(attributwerte1);
 
 		} catch (WebDriverException wde) {
-			return "kein Id";
+			return "kein Text";
 		}
 		return attributwerte1;
 	}

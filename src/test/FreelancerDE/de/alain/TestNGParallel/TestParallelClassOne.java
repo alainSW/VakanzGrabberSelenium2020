@@ -109,6 +109,7 @@ public class TestParallelClassOne {
 			sqlite.SQLITEJDBCConnectToDatabase();
 			// Tabelle erstellen
 			sqlite.SQLITEJDBCCreateTable();
+			sqlite.SQLITEJDBCDelete();
 
 			driver.manage().window().maximize();
 

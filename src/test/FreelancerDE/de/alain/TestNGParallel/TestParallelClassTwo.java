@@ -227,6 +227,7 @@ public class TestParallelClassTwo {
 	public void EndTest() {
 
 		// Query Select betätigen und Ergebnisse zeigen
+		sqlite.SQLITEJDBCDelete();
 		sqlite.SQLITEJDBCSelect();
 		extent.flush();
 

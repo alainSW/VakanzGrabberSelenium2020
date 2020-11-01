@@ -241,6 +241,7 @@ public class ProjektMaskeNavigationUndProjektMerkmaleHolen extends Base {
 			projektInformationen[(projektMaskeNummer - 1) * 20 + prokektNummer - 1] = new ProjektInformationen(
 					projektTitle, geplanterStart, voraussichtlichesEnde, projektOrt, stundenSatz, remote, letzteUpdat,
 					refenrenzNummer, projektbeschreibung);
+			System.out.println(projektInformationen[(projektMaskeNummer - 1) * 20 + prokektNummer - 1]);
 
 			// System.out.println("aaa1");
 
@@ -259,8 +260,7 @@ public class ProjektMaskeNavigationUndProjektMerkmaleHolen extends Base {
 			projektInformationen[(projektMaskeNummer - 1) * 20 + prokektNummer - 1] = new ProjektInformationen(
 					projektTitle, geplanterStart, voraussichtlichesEnde, projektOrt, stundenSatz, refenrenzNummer,
 					remote, letzteUpdat, projektbeschreibung);
-
-			// System.out.println("aaa4");
+			System.out.println(projektInformationen[(projektMaskeNummer - 1) * 20 + prokektNummer - 1]);
 			/*
 			 * System.out.println("Kein Remote 2: " + String.valueOf(prokektNummer) + " " +
 			 * LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss")));
@@ -282,7 +282,7 @@ public class ProjektMaskeNavigationUndProjektMerkmaleHolen extends Base {
 					Projektmerkmale.StundenSatz(), Projektmerkmale.Remote(), Projektmerkmale.LetzteUpdate(),
 					Projektmerkmale.RefenrenzNummer(), Projektmerkmale.Projektbeschreibung());
 
-			// System.out.println("aaa2");
+			System.out.println(projektInformationen[(projektMaskeNummer - 1) * 20 + prokektNummer - 1]);
 			return;
 		}
 
@@ -297,7 +297,7 @@ public class ProjektMaskeNavigationUndProjektMerkmaleHolen extends Base {
 					Projektmerkmale.StundenSatz(), Projektmerkmale.Remote(), Projektmerkmale.RefenrenzNummer(),
 					Projektmerkmale.LetzteUpdate(), Projektmerkmale.Projektbeschreibung());
 
-			// System.out.println("aaa3");
+			System.out.println(projektInformationen[(projektMaskeNummer - 1) * 20 + prokektNummer - 1]);
 			return;
 		}
 
@@ -311,7 +311,7 @@ public class ProjektMaskeNavigationUndProjektMerkmaleHolen extends Base {
 					Projektmerkmale.VoraussichtlichesEnde(), Projektmerkmale.ProjektOrt(),
 					Projektmerkmale.RefenrenzNummer(), Projektmerkmale.StundenSatz(), Projektmerkmale.Remote(),
 					Projektmerkmale.LetzteUpdate(), Projektmerkmale.Projektbeschreibung());
-			// System.out.println("aaa5");
+			System.out.println(projektInformationen[(projektMaskeNummer - 1) * 20 + prokektNummer - 1]);
 			return;
 		}
 
@@ -325,7 +325,7 @@ public class ProjektMaskeNavigationUndProjektMerkmaleHolen extends Base {
 					Projektmerkmale.VoraussichtlichesEnde(), Projektmerkmale.ProjektOrt(),
 					Projektmerkmale.StundenSatz(), Projektmerkmale.Remote(), Projektmerkmale.LetzteUpdate(),
 					Projektmerkmale.RefenrenzNummer(), Projektmerkmale.Projektbeschreibung());
-			// System.out.println("aaa6");
+			System.out.println(projektInformationen[(projektMaskeNummer - 1) * 20 + prokektNummer - 1]);
 			return;
 		}
 
@@ -339,7 +339,7 @@ public class ProjektMaskeNavigationUndProjektMerkmaleHolen extends Base {
 					Projektmerkmale.VoraussichtlichesEnde(), Projektmerkmale.ProjektOrt(),
 					Projektmerkmale.StundenSatz(), Projektmerkmale.LetzteUpdate(), Projektmerkmale.RefenrenzNummer(),
 					Projektmerkmale.Remote(), Projektmerkmale.Projektbeschreibung());
-			// System.out.println("aaa7");
+			System.out.println(projektInformationen[(projektMaskeNummer - 1) * 20 + prokektNummer - 1]);
 			return;
 		}
 
@@ -352,7 +352,7 @@ public class ProjektMaskeNavigationUndProjektMerkmaleHolen extends Base {
 					Projektmerkmale.VoraussichtlichesEnde(), Projektmerkmale.ProjektOrt(),
 					Projektmerkmale.StundenSatz(), Projektmerkmale.LetzteUpdate(), Projektmerkmale.Remote(),
 					Projektmerkmale.RefenrenzNummer(), Projektmerkmale.Projektbeschreibung());
-			// System.out.println("aaa8");
+			System.out.println(projektInformationen[(projektMaskeNummer - 1) * 20 + prokektNummer - 1]);
 			return;
 		}
 
@@ -366,7 +366,7 @@ public class ProjektMaskeNavigationUndProjektMerkmaleHolen extends Base {
 					Projektmerkmale.VoraussichtlichesEnde(), Projektmerkmale.ProjektOrt(),
 					Projektmerkmale.LetzteUpdate(), Projektmerkmale.StundenSatz(), Projektmerkmale.Remote(),
 					Projektmerkmale.RefenrenzNummer(), Projektmerkmale.Projektbeschreibung());
-			// System.out.println("aaa9");
+			System.out.println(projektInformationen[(projektMaskeNummer - 1) * 20 + prokektNummer - 1]);
 			return;
 
 		}
@@ -381,7 +381,7 @@ public class ProjektMaskeNavigationUndProjektMerkmaleHolen extends Base {
 					Projektmerkmale.VoraussichtlichesEnde(), Projektmerkmale.ProjektOrt(),
 					Projektmerkmale.LetzteUpdate(), Projektmerkmale.StundenSatz(), Projektmerkmale.RefenrenzNummer(),
 					Projektmerkmale.Remote(), Projektmerkmale.Projektbeschreibung());
-			// System.out.println("aaa10");
+			System.out.println(projektInformationen[(projektMaskeNummer - 1) * 20 + prokektNummer - 1]);
 			return;
 		}
 
@@ -395,7 +395,7 @@ public class ProjektMaskeNavigationUndProjektMerkmaleHolen extends Base {
 					Projektmerkmale.VoraussichtlichesEnde(), Projektmerkmale.ProjektOrt(),
 					Projektmerkmale.LetzteUpdate(), Projektmerkmale.RefenrenzNummer(), Projektmerkmale.StundenSatz(),
 					Projektmerkmale.Remote(), Projektmerkmale.Projektbeschreibung());
-			// System.out.println("aaa12");
+			System.out.println(projektInformationen[(projektMaskeNummer - 1) * 20 + prokektNummer - 1]);
 			return;
 		}
 
@@ -409,7 +409,7 @@ public class ProjektMaskeNavigationUndProjektMerkmaleHolen extends Base {
 					Projektmerkmale.VoraussichtlichesEnde(), Projektmerkmale.ProjektOrt(),
 					Projektmerkmale.StundenSatz(), Projektmerkmale.Remote(), Projektmerkmale.LetzteUpdate(),
 					Projektmerkmale.RefenrenzNummer(), Projektmerkmale.Projektbeschreibung());
-			// System.out.println("aaa13");
+			System.out.println(projektInformationen[(projektMaskeNummer - 1) * 20 + prokektNummer - 1]);
 			return;
 		}
 
@@ -423,7 +423,7 @@ public class ProjektMaskeNavigationUndProjektMerkmaleHolen extends Base {
 					Projektmerkmale.VoraussichtlichesEnde(), Projektmerkmale.ProjektOrt(), Projektmerkmale.Remote(),
 					Projektmerkmale.StundenSatz(), Projektmerkmale.LetzteUpdate(), Projektmerkmale.RefenrenzNummer(),
 					Projektmerkmale.Projektbeschreibung());
-			// System.out.println("aaa4");
+			System.out.println(projektInformationen[(projektMaskeNummer - 1) * 20 + prokektNummer - 1]);
 			return;
 		}
 
@@ -437,7 +437,7 @@ public class ProjektMaskeNavigationUndProjektMerkmaleHolen extends Base {
 					Projektmerkmale.VoraussichtlichesEnde(), Projektmerkmale.ProjektOrt(),
 					Projektmerkmale.LetzteUpdate(), Projektmerkmale.Remote(), Projektmerkmale.StundenSatz(),
 					Projektmerkmale.RefenrenzNummer(), Projektmerkmale.Projektbeschreibung());
-			// System.out.println("aaa14");
+			System.out.println(projektInformationen[(projektMaskeNummer - 1) * 20 + prokektNummer - 1]);
 			return;
 		}
 
@@ -451,7 +451,7 @@ public class ProjektMaskeNavigationUndProjektMerkmaleHolen extends Base {
 					Projektmerkmale.VoraussichtlichesEnde(), Projektmerkmale.ProjektOrt(),
 					Projektmerkmale.RefenrenzNummer(), Projektmerkmale.Remote(), Projektmerkmale.LetzteUpdate(),
 					Projektmerkmale.StundenSatz(), Projektmerkmale.Projektbeschreibung());
-			// System.out.println("aaa15");
+			System.out.println(projektInformationen[(projektMaskeNummer - 1) * 20 + prokektNummer - 1]);
 			return;
 		}
 
@@ -462,7 +462,7 @@ public class ProjektMaskeNavigationUndProjektMerkmaleHolen extends Base {
 					projektTitle, geplanterStart, voraussichtlichesEnde, projektOrt, stundenSatz, remote, letzteUpdat,
 					refenrenzNummer, projektbeschreibung);
 
-			// System.out.println("aaa16");
+			System.out.println(projektInformationen[(projektMaskeNummer - 1) * 20 + prokektNummer - 1]);
 			return;
 
 		}
@@ -476,7 +476,7 @@ public class ProjektMaskeNavigationUndProjektMerkmaleHolen extends Base {
 					projektTitle, geplanterStart, voraussichtlichesEnde, projektOrt, stundenSatz, remote, letzteUpdat,
 					refenrenzNummer, projektbeschreibung);
 
-			// System.out.println("aaa16");
+			System.out.println(projektInformationen[(projektMaskeNummer - 1) * 20 + prokektNummer - 1]);
 			return;
 
 		}
