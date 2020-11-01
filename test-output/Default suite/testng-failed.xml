@@ -5,8 +5,10 @@
     <classes>
       <class name="de.alain.TestNGParallel.TestParallelClassOne">
         <methods>
-          <include name="test_1" invocation-numbers="1"/>
+          <include name="test_1" invocation-numbers="0"/>
+          <include name="setup"/>
           <include name="afterMethod"/>
+          <include name="EndTest"/>
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- de.alain.TestNGParallel.TestParallelClassOne -->

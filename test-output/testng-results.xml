@@ -1,66 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="1" failed="3" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[All test Execution started]]>
+    </line>
+    <line>
+      <![CDATA[Starting test is test_1]]>
+    </line>
+    <line>
+      <![CDATA[Test passed test_1]]>
+    </line>
+    <line>
+      <![CDATA[Starting test is test_1]]>
+    </line>
+    <line>
+      <![CDATA[Test passed test_1]]>
+    </line>
+    <line>
+      <![CDATA[Starting test is test_2]]>
+    </line>
+    <line>
+      <![CDATA[Test passed test_2]]>
+    </line>
+    <line>
+      <![CDATA[Starting test is test_2]]>
+    </line>
+    <line>
+      <![CDATA[Test passed test_2]]>
+    </line>
   </reporter-output>
-  <suite started-at="2020-08-27T18:38:06 MESZ" name="Test-class Suite" finished-at="2020-08-27T18:40:15 MESZ" duration-ms="128928">
+  <suite started-at="2020-11-01T23:01:17 CET" name="TestNgTest" finished-at="2020-11-01T23:04:36 CET" duration-ms="199854">
     <groups>
     </groups>
-    <test started-at="2020-08-27T18:38:06 MESZ" name="Test-class test" finished-at="2020-08-27T18:40:15 MESZ" duration-ms="128928">
+    <test started-at="2020-11-01T23:01:17 CET" name="MyTest1" finished-at="2020-11-01T23:04:36 CET" duration-ms="199854">
       <class name="de.alain.TestNGParallel.TestParallelClassTwo">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassTwo@2ed2d9cb]" started-at="2020-08-27T18:38:06 MESZ" name="beforeMethod" finished-at="2020-08-27T18:38:11 MESZ" duration-ms="4492" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassTwo@7bab3f1a]" started-at="2020-11-01T23:01:17 CET" name="setup" finished-at="2020-11-01T23:01:17 CET" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassTwo@7bab3f1a]" started-at="2020-11-01T23:02:20 CET" name="beforeMethod" finished-at="2020-11-01T23:02:24 CET" duration-ms="3941" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="test_2(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassTwo@2ed2d9cb]" started-at="2020-08-27T18:38:11 MESZ" name="test_2" data-provider="data-provider" finished-at="2020-08-27T18:38:54 MESZ" duration-ms="43399" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[msg]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.ArrayIndexOutOfBoundsException">
-            <message>
-              <![CDATA[Index 1 out of bounds for length 1]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
-at de.alain.ProjektStatitikUndInformationen.ProjektStatistik.EndProjektMaskeNummer(ProjektStatistik.java:40)
-at de.alain.ProjektStatitikUndInformationen.ProjektStatistik.AnzahlProjektProMaske(ProjektStatistik.java:61)
-at de.alain.ProjektmaskeNavigationUndProjektmerkmaleHolen.ProjektMaskeNavigationUndProjektMerkmaleHolen.AnzahlProjektJeMaske(ProjektMaskeNavigationUndProjektMerkmaleHolen.java:88)
-at de.alain.ProjektmaskeNavigationUndProjektmerkmaleHolen.ProjektMaskeNavigationUndProjektMerkmaleHolen.projektClick(ProjektMaskeNavigationUndProjektMerkmaleHolen.java:119)
-at de.alain.ProjektmaskeNavigationUndProjektmerkmaleHolen.ProjektMaskeNavigationUndProjektMerkmaleHolen.ProjektmaskeAnklickeUndMaskeInformationenAssortieren(ProjektMaskeNavigationUndProjektMerkmaleHolen.java:53)
-at de.alain.TestNGParallel.TestParallelClassTwo.test_2(TestParallelClassTwo.java:116)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:834)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.ArrayIndexOutOfBoundsException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_2 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassTwo@2ed2d9cb]" started-at="2020-08-27T18:38:54 MESZ" name="afterMethod" finished-at="2020-08-27T18:38:54 MESZ" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassTwo@2ed2d9cb]" started-at="2020-08-27T18:38:54 MESZ" name="beforeMethod" finished-at="2020-08-27T18:38:54 MESZ" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="test_2(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassTwo@2ed2d9cb]" started-at="2020-08-27T18:38:54 MESZ" name="test_2" data-provider="data-provider" finished-at="2020-08-27T18:38:57 MESZ" duration-ms="2653" status="FAIL">
+        <test-method signature="test_2(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassTwo@7bab3f1a]" started-at="2020-11-01T23:02:24 CET" name="test_2" data-provider="data-provider" finished-at="2020-11-01T23:04:23 CET" duration-ms="118781" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -68,48 +50,73 @@ at java.base/java.lang.Thread.run(Thread.java:834)
               </value>
             </param>
           </params>
-          <exception class="java.lang.ArrayIndexOutOfBoundsException">
-            <message>
-              <![CDATA[Index 1 out of bounds for length 1]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
-at de.alain.ProjektStatitikUndInformationen.ProjektStatistik.EndProjektMaskeNummer(ProjektStatistik.java:40)
-at de.alain.ProjektStatitikUndInformationen.ProjektStatistik.AnzahlDerGeneriertenMaskeJeProjektsuche(ProjektStatistik.java:69)
-at de.alain.ProjektmaskeNavigationUndProjektmerkmaleHolen.ProjektMaskeNavigationUndProjektMerkmaleHolen.ProjektmaskeAnklickeUndMaskeInformationenAssortieren(ProjektMaskeNavigationUndProjektMerkmaleHolen.java:45)
-at de.alain.TestNGParallel.TestParallelClassTwo.test_2(TestParallelClassTwo.java:116)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:834)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.ArrayIndexOutOfBoundsException -->
           <reporter-output>
+            <line>
+              <![CDATA[Starting test is test_2]]>
+            </line>
+            <line>
+              <![CDATA[Test passed test_2]]>
+            </line>
           </reporter-output>
         </test-method> <!-- test_2 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassTwo@2ed2d9cb]" started-at="2020-08-27T18:38:57 MESZ" name="afterMethod" finished-at="2020-08-27T18:39:01 MESZ" duration-ms="3848" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassTwo@7bab3f1a]" started-at="2020-11-01T23:04:23 CET" name="afterMethod" finished-at="2020-11-01T23:04:23 CET" duration-ms="118" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_2 status=SUCCESS method=TestParallelClassTwo.test_2(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassTwo@7bab3f1a] output=Starting test is test_2]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- de.alain.TestNGParallel.TestParallelClassTwo -->
-      <class name="de.alain.TestNGParallel.TestParallelClassOne">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@6392827e]" started-at="2020-08-27T18:38:06 MESZ" name="beforeMethod" finished-at="2020-08-27T18:38:11 MESZ" duration-ms="4892" status="PASS">
+        <test-method signature="test_2(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassTwo@7bab3f1a]" started-at="2020-11-01T23:04:23 CET" name="test_2" data-provider="data-provider" finished-at="2020-11-01T23:04:32 CET" duration-ms="8643" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Testkoordinator]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Starting test is test_2]]>
+            </line>
+            <line>
+              <![CDATA[Test passed test_2]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- test_2 -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassTwo@7bab3f1a]" started-at="2020-11-01T23:04:23 CET" name="beforeMethod" finished-at="2020-11-01T23:04:23 CET" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@6392827e]" started-at="2020-08-27T18:38:11 MESZ" name="test_1" data-provider="data-provider" finished-at="2020-08-27T18:38:56 MESZ" duration-ms="45058" status="FAIL">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassTwo@7bab3f1a]" started-at="2020-11-01T23:04:32 CET" name="afterMethod" finished-at="2020-11-01T23:04:36 CET" duration-ms="4111" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_2 status=SUCCESS method=TestParallelClassTwo.test_2(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassTwo@7bab3f1a] output=Starting test is test_2]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="EndTest()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassTwo@7bab3f1a]" started-at="2020-11-01T23:04:36 CET" name="EndTest" finished-at="2020-11-01T23:04:36 CET" duration-ms="515" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EndTest -->
+      </class> <!-- de.alain.TestNGParallel.TestParallelClassTwo -->
+      <class name="de.alain.TestNGParallel.TestParallelClassOne">
+        <test-method is-config="true" signature="setup()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@36916eb0]" started-at="2020-11-01T23:01:17 CET" name="setup" finished-at="2020-11-01T23:01:17 CET" duration-ms="167" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@36916eb0]" started-at="2020-11-01T23:01:17 CET" name="beforeMethod" finished-at="2020-11-01T23:01:22 CET" duration-ms="4881" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@36916eb0]" started-at="2020-11-01T23:01:22 CET" name="test_1" data-provider="data-provider" finished-at="2020-11-01T23:02:10 CET" duration-ms="48055" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -117,57 +124,63 @@ at java.base/java.lang.Thread.run(Thread.java:834)
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at de.alain.ProjektmaskeNavigationUndProjektmerkmaleHolen.ProjektMaskeNavigationUndProjektMerkmaleHolen.listProjektInformationen(ProjektMaskeNavigationUndProjektMerkmaleHolen.java:183)
-at de.alain.ProjektmaskeNavigationUndProjektmerkmaleHolen.ProjektMaskeNavigationUndProjektMerkmaleHolen.ProjektmaskeAnklickeUndMaskeInformationenAssortieren(ProjektMaskeNavigationUndProjektMerkmaleHolen.java:75)
-at de.alain.TestNGParallel.TestParallelClassOne.test_1(TestParallelClassOne.java:134)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:834)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
+            <line>
+              <![CDATA[Starting test is test_1]]>
+            </line>
+            <line>
+              <![CDATA[Test passed test_1]]>
+            </line>
           </reporter-output>
         </test-method> <!-- test_1 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@6392827e]" started-at="2020-08-27T18:38:56 MESZ" name="afterMethod" finished-at="2020-08-27T18:38:56 MESZ" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@6392827e]" started-at="2020-08-27T18:38:56 MESZ" name="test_1" data-provider="data-provider" finished-at="2020-08-27T18:40:11 MESZ" duration-ms="74888" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@36916eb0]" started-at="2020-11-01T23:02:10 CET" name="afterMethod" finished-at="2020-11-01T23:02:10 CET" duration-ms="113" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Leiter]]>
+                <![CDATA[[TestResult name=test_1 status=SUCCESS method=TestParallelClassOne.test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@36916eb0] output=Starting test is test_1]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_1 -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@6392827e]" started-at="2020-08-27T18:38:56 MESZ" name="beforeMethod" finished-at="2020-08-27T18:38:56 MESZ" duration-ms="0" status="PASS">
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@36916eb0]" started-at="2020-11-01T23:02:10 CET" name="beforeMethod" finished-at="2020-11-01T23:02:10 CET" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@6392827e]" started-at="2020-08-27T18:40:11 MESZ" name="afterMethod" finished-at="2020-08-27T18:40:15 MESZ" duration-ms="3854" status="PASS">
+        <test-method signature="test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@36916eb0]" started-at="2020-11-01T23:02:10 CET" name="test_1" data-provider="data-provider" finished-at="2020-11-01T23:02:16 CET" duration-ms="5841" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Testanalyst]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Starting test is test_1]]>
+            </line>
+            <line>
+              <![CDATA[Test passed test_1]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- test_1 -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@36916eb0]" started-at="2020-11-01T23:02:16 CET" name="afterMethod" finished-at="2020-11-01T23:02:20 CET" duration-ms="4130" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test_1 status=SUCCESS method=TestParallelClassOne.test_1(java.lang.String)[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@36916eb0] output=Starting test is test_1]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="EndTest()[pri:0, instance:de.alain.TestNGParallel.TestParallelClassOne@36916eb0]" started-at="2020-11-01T23:04:36 CET" name="EndTest" finished-at="2020-11-01T23:04:36 CET" duration-ms="330" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EndTest -->
       </class> <!-- de.alain.TestNGParallel.TestParallelClassOne -->
-    </test> <!-- Test-class test -->
-  </suite> <!-- Test-class Suite -->
+    </test> <!-- MyTest1 -->
+  </suite> <!-- TestNgTest -->
 </testng-results>
